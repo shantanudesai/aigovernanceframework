@@ -2,7 +2,7 @@
 
 A comprehensive framework for implementing and managing AI governance controls across twelve key domains. This web application provides an interactive interface to explore and understand various aspects of AI governance.
 
-Made with Love in Pune, India
+Made with :heart: in Pune, India
 
 ## Features
 
