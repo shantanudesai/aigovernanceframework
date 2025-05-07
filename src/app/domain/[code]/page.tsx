@@ -4,6 +4,7 @@ import { frameworkData } from '../../../data/framework-data';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowLeftIcon } from '@heroicons/react/24/outline';
+import ControlDetails from '@/components/ControlDetails';
 
 export default function DomainPage({ params }: { params: { code: string } }) {
   const controls = frameworkData.data.filter(
@@ -69,6 +70,12 @@ export default function DomainPage({ params }: { params: { code: string } }) {
                     </div>
                   ))}
               </div>
+
+              <ControlDetails
+                keyControlActivities={control['Key control activities']}
+                requiredEvidence={control['Required Evidence']}
+                controlTestPlan={control['Control test plan and procedures']}
+              />
             </motion.div>
           ))}
         </div>

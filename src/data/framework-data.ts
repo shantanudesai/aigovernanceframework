@@ -9,6 +9,9 @@ interface FrameworkControl {
   'EU AI ACT'?: string | number;
   'NIST RMF'?: string;
   SOC2?: string;
+  'Key control activities'?: string;
+  'Required Evidence'?: string;
+  'Control test plan and procedures'?: string;
 }
 
 export const frameworkData = {
@@ -23,7 +26,10 @@ export const frameworkData = {
       ISO27701: "6.1.1 6.1.2",
       "EU AI ACT": 4.1,
       "NIST RMF": "Govern 1.1 Govern 2.3 Govern 3.1",
-      SOC2: "CC.1.1 CC.1.2 CC.1.3 CC.1.4 CC.1.5 CC.5.3"
+      SOC2: "CC.1.1 CC.1.2 CC.1.3 CC.1.4 CC.1.5 CC.5.3",
+      "Key control activities": "Establish and document an AI governance policy that aligns with organizational objectives and values. - Review and update the policy at least annually (or as per defined intervals). - Ensure executive leadership actively participates in AI risk decisions (e.g., through regular meetings or reviews). - Assign ultimate accountability for AI systems to a specific executive role (e.g., Chief AI Officer or equivalent).",
+      "Required Evidence": "Copies of the approved AI governance policy. - Records of policy reviews, including dates, reviewers, and changes made. - Meeting minutes or decision logs showing executive leadership involvement in AI risk decisions. - Documentation of the assigned accountability (e.g., organizational chart or role description).",
+      "Control test plan and procedures": "Verify the existence and accessibility of the AI governance policy. - Check records to confirm policy reviews occur at defined intervals (e.g., annually). - Review meeting minutes to ensure executive leadership is actively engaged in AI risk decisions. - Confirm documentation exists that clearly assigns ultimate accountability for AI systems. - Ensure the policy includes pass/fail criteria (e.g., compliance with ISO 42001 or EU AI Act) and corrective actions for noncompliance."
     },
     {
       Domain: "Governance & Leadership",
@@ -35,7 +41,10 @@ export const frameworkData = {
       ISO27701: "6.2.1 6.2.2 7.2.2 9.2.3",
       "EU AI ACT": "22.1 22.2 26.3",
       "NIST RMF": null,
-      SOC2: "CC.1.3 CC.1.4"
+      SOC2: "CC.1.3 CC.1.4",
+      "Key control activities": "Define and document roles and responsibilities for AI governance, including segregation of duties (e.g., development, deployment, oversight). - Ensure roles are staffed with competent individuals (e.g., through skills assessment or training). - Document required resources, including personnel competencies, tools, and infrastructure. - Review and update roles, responsibilities, and resource documentation annually.",
+      "Required Evidence": "Organizational charts or role descriptions outlining AI governance roles and responsibilities. - Job descriptions or competency matrices for AI governance personnel. - Records of resource allocation (e.g., budgets, procurement documents for tools and infrastructure). - Documentation of annual reviews of roles, responsibilities, and resources.",
+      "Control test plan and procedures": "Verify that roles and responsibilities are clearly documented and aligned with segregation of duties. - Check that personnel have the required competencies (e.g., through training records or certifications). - Review resource allocation records to ensure tools and infrastructure are adequately provided. - Confirm annual reviews are conducted and documented. - Ensure the documentation includes specific indicators for pass/fail (e.g., all roles filled by competent personnel) and corrective actions (e.g., retraining or reallocation)."
     },
     {
       Domain: "Governance & Leadership",
@@ -47,7 +56,10 @@ export const frameworkData = {
       ISO27701: "A.7.2.1 A.7.2.2 B.8.2.2",
       "EU AI ACT": null,
       "NIST RMF": "Map 1.3 Map 1.4 Govern 1.1 Govern 1.2 Govern 4.1 Govern 3.1",
-      SOC2: null
+      SOC2: null,
+      "Key control activities": "Document AI objectives that align with business goals, ethical principles, and regulatory requirements (e.g., ISO 42001, EU AI Act). - Integrate these objectives into organizational practices (e.g., through policies, training, or workflows). - Review and update objectives at least annually to ensure relevance and effectiveness. - Implement initiatives to promote critical thinking and safety-first approaches (e.g., training programs or ethical AI workshops).",
+      "Required Evidence": "Documentation of AI objectives, showing alignment with business goals, ethics, and regulations. - Records of how objectives are integrated into practices (e.g., policy documents, training materials). - Minutes from annual review meetings of AI objectives. - Evidence of initiatives promoting critical thinking and safety (e.g., training session records, workshop agendas).",
+      "Control test plan and procedures": "Verify that AI objectives are documented and aligned with business goals, ethics, and regulations. - Check that objectives are integrated into organizational practices (e.g., through policy references or training logs). - Review records to confirm annual reviews of objectives. - Assess whether initiatives for critical thinking and safety are in place and effective (e.g., through participant feedback or outcome metrics). - Ensure documentation includes pass/fail criteria (e.g., objectives met or not) and corrective actions (e.g., revising objectives or retraining staff)."
     },
     {
       Domain: "Risk Management",
@@ -59,7 +71,10 @@ export const frameworkData = {
       ISO27701: "12.2.1 A.7.2.5 A.7.2.8 B.8.2.6",
       "EU AI ACT": "9.1 9.2",
       "NIST RMF": "Govern 1.3 Govern 1.4 Govern 1.5 Map 1.5",
-      SOC2: "CC3.1"
+      SOC2: "CC3.1",
+      "Key control activities": "Establish and document a comprehensive risk management system covering the entire AI lifecycle. - Define clear roles, responsibilities, and processes for identifying, assessing, treating, and monitoring AI-related risks. - Incorporate regular reviews by executive leadership (e.g., quarterly or annually). - Ensure risk management activities align with organisational risk tolerance. - Make risk management processes transparent, documented, and appropriately resourced (e.g., allocate budget and personnel).",
+      "Required Evidence": "Risk management system documentation (policies, procedures, processes). - Risk registers and assessment reports. - Minutes of executive leadership reviews (e.g., quarterly or annual). - Resource allocation records (e.g., budget approvals, staffing plans). - Storage: Centralized GRC system; Sample size: All current and historical risk-related documents.",
+      "Control test plan and procedures": "Verify the existence and accessibility of the documented risk management system. - Check that roles and responsibilities are clearly defined (e.g., via organizational charts or role descriptions). - Review risk registers and assessment reports to ensure regular updates (e.g., quarterly). - Confirm that executive leadership reviews are held as scheduled (e.g., quarterly or annually). - Ensure alignment with organisational risk tolerance (e.g., through documented risk appetite statements). - Verify that risk management processes are transparent and adequately resourced (e.g., budget and personnel records). - Pass/Fail: All risks identified, assessed, treated, and monitored; corrective actions for gaps (e.g., resource reallocation)."
     },
     {
       Domain: "Risk Management",
@@ -71,7 +86,10 @@ export const frameworkData = {
       ISO27701: "A.7.2.5 A.7.3.10 A.7.4.4",
       "EU AI ACT": "9.9 27.1",
       "NIST RMF": "Map 1.1 Map 3.1 Map 3.2 Measure 2.6 Measure 2.7 Measure 2.8 Measure 2.10 Measure 2.12",
-      SOC2: "CC3.2"
+      SOC2: "CC3.2",
+      "Key control activities": "Conduct and document comprehensive impact assessments for AI systems throughout their lifecycle (e.g., pre-deployment, post-deployment, and annually). - Assess potential effects on individuals, groups, and society, including fundamental rights, safety, environmental impacts, and vulnerable populations. - Maintain a systematic approach to identifying both existing and emerging risks, including from third-party components (e.g., via vendor risk assessments). - Review and update impact assessments annually or when significant changes occur.",
+      "Required Evidence": "Impact assessment reports, including methodologies, findings, and mitigation strategies. - Documentation of risk identification processes (e.g., risk matrices or heatmaps). - Records of third-party risk assessments (e.g., vendor due diligence reports). - Storage: GRC system; Sample size: All AI systems' impact assessments for the current year and past three years.",
+      "Control test plan and procedures": "Verify that impact assessments are conducted for all AI systems as required (e.g., pre-deployment and annually). - Review assessment reports to ensure they cover all necessary aspects (e.g., individuals, groups, society, fundamental rights, safety, environment, vulnerable populations). - Check that systematic risk identification processes are in place (e.g., documented methodologies for risk discovery). - Confirm that third-party risks are assessed (e.g., via vendor questionnaires or audits). - Ensure assessments are reviewed and updated as required (e.g., annually or upon system changes). - Pass/Fail: All required assessments completed; corrective actions for incomplete or inadequate assessments (e.g., reassessment or system adjustments)."
     },
     {
       Domain: "Risk Management",
@@ -83,7 +101,10 @@ export const frameworkData = {
       ISO27701: "A.7.4.1 A.7.4.2 A.7.4.4 A.7.4.5",
       "EU AI ACT": "8.1 8.2 17.1 9.3 9.4 9.5",
       "NIST RMF": "Manage 1.2 Manage 1.3 Manage 1.4",
-      SOC2: "CC5.1 CC9.1"
+      SOC2: "CC5.1 CC9.1",
+      "Key control activities": "Implement technical and organizational measures to address identified risks (e.g., data encryption, access controls, training programs). - Ensure controls are proportionate to risk levels and organizational risk tolerance (e.g., high-risk systems require more stringent controls). - Document risk treatment strategies and prioritize based on impact and likelihood (e.g., using a risk matrix). - Assign clear accountability for implementation (e.g., specific roles like AI Risk Officer). - Maintain specific protocols for high-risk AI systems, including quality management systems (e.g., ISO 9001) and compliance verification processes (e.g., third-party audits).",
+      "Required Evidence": "Risk treatment plans and strategies (e.g., documented action plans). - Records of implemented controls (e.g., system configurations, training logs). - Quality management system documentation for high-risk AI systems (e.g., ISO 9001 certification). - Compliance verification reports (e.g., audit reports or self-assessment logs). - Storage: GRC system; Sample size: All risk treatment documentation for current and past year.",
+      "Control test plan and procedures": "Verify that risk treatment measures are implemented as per documented plans. - Check that controls are proportionate to identified risks (e.g., via risk assessment cross-referencing). - Review prioritization of risk treatments based on impact and likelihood (e.g., via risk matrix). - Ensure accountability is clearly assigned (e.g., via role descriptions or accountability matrices). - Confirm that specific protocols for high-risk AI systems are in place (e.g., quality management processes, compliance checks). - Pass/Fail: All identified risks have proportionate treatments; corrective actions for gaps (e.g., additional controls or re-prioritization)."
     },
     {
       Domain: "Risk Management",
@@ -95,7 +116,10 @@ export const frameworkData = {
       ISO27701: "A.7.4.3 A.7.4.9 B.8.2.4 B.8.2.5 B.8.4.3",
       "EU AI ACT": 9.6,
       "NIST RMF": "Measure 3.1 Measure 3.2 Manage 2.1 Manage 2.2 Manage 2.3 Manage 3.1 Govern 6.1 Govern 6.2",
-      SOC2: "CC3.4 CC9.2"
+      SOC2: "CC3.4 CC9.2",
+      "Key control activities": "Implement continuous monitoring processes to track the effectiveness of risk controls (e.g., via automated tools or periodic reviews). - Identify emerging risks throughout the AI lifecycle (e.g., through threat intelligence or incident reporting). - Include mechanisms for detecting and responding to previously unknown risks (e.g., anomaly detection systems). - Regularly evaluate third-party risk exposure (e.g., quarterly vendor risk reviews). - Maintain processes for incident response and recovery (e.g., documented incident response plans). - Document monitoring activities and ensure appropriate escalation paths for risk-related issues (e.g., via escalation matrices).",
+      "Required Evidence": "Monitoring reports and logs (e.g., system logs, audit trails). - Incident response and recovery plans (e.g., documented procedures). - Records of third-party risk evaluations (e.g., vendor audit reports). - Documentation of escalation procedures and actions taken (e.g., issue logs). - Storage: GRC system; Sample size: All monitoring and incident records for current year.",
+      "Control test plan and procedures": "Verify that continuous monitoring processes are operational (e.g., via system configurations or tool usage logs). - Review monitoring reports to ensure they cover all required areas (e.g., control effectiveness, emerging risks). - Check that mechanisms for detecting emerging risks are effective (e.g., via threat intelligence reports). - Ensure third-party risks are regularly evaluated (e.g., quarterly reviews). - Confirm that incident response and recovery processes are tested and updated (e.g., via drill records). - Verify that documentation of monitoring activities is complete and accurate (e.g., via audit trails). - Pass/Fail: All monitoring activities are conducted as scheduled; corrective actions for gaps (e.g., process improvements or additional monitoring)."
     },
     {
       Domain: "Regulatory Operations",
@@ -107,7 +131,10 @@ export const frameworkData = {
       ISO27701: "18.2.1 A.7.2.1-A.7.2.4 B.8.2.1-B.8.2.2 B.8.2.4-B.8.2.5",
       "EU AI ACT": "5.1 5.2 6.1-6.4 8.1-8.2 40.1 41.1 42.1 43.1-43.4 44.2-44.3 47.1-47.4 49.1-49.3",
       "NIST RMF": "Govern 1.1 Map 4.1",
-      SOC2: "CC1.5"
+      SOC2: "CC1.5",
+      "Key control activities": "Quarterly, the Compliance Officer reviews regulatory updates from relevant authorities (EU AI Act, NIST, ISO) and updates the compliance tracking register - Monthly, the AI Governance Committee assesses the applicability of new requirements to existing AI systems using the Regulatory Impact Assessment template - Semi-annually, the Compliance team conducts a comprehensive gap analysis against applicable requirements and documents findings in the Compliance Assessment Report - For high-risk AI systems, the AI Product Manager maintains a specific compliance checklist that is reviewed monthly by the Compliance Officer - When new regulations are published, the Legal team analyzes requirements within 30 days and communicates necessary changes to relevant stakeholders",
+      "Required Evidence": "Compliance Tracking Register documenting all applicable regulations with dates of updates (Excel format) - Regulatory Impact Assessment reports for each new regulatory requirement (PDF format) - Gap Analysis Reports from semi-annual compliance assessments (PDF format) - High-Risk AI System Compliance Checklists for each applicable system (Excel format) - Meeting minutes from AI Governance Committee showing review of regulatory changes (PDF format) - Regulatory notification emails sent to stakeholders with acknowledgment receipts (Email archive) - Documentation of conformity assessments conducted for high-risk AI systems (PDF format) - Certificates and compliance documentation with validity dates and renewal schedules (PDF format)",
+      "Control test plan and procedures": "1. Select the last four quarterly regulatory reviews performed by the Compliance Officer 2. Verify that the Compliance Tracking Register has been updated appropriately with new requirements 3 For three randomly selected regulatory updates, trace through the process to confirm: ◦ Initial assessment was completed within 30 days ◦ Impact analysis was documented using the standard template ◦ Required changes were communicated to appropriate stakeholders ◦ Implementation plans were developed and tracked to completion 4 For high-risk AI systems, verify monthly compliance reviews are conducted by examining the last six months of checklists 5 Select two certification renewals from the past year and confirm they were completed before expiration 6 Control passes if all samples show compliance with established procedures and timelines; fails if any step was missed or significant delays occurred 7 If failure, the Compliance Officer must report to the AI Governance Committee and establish a remediation plan within 10 business days"
     },
     {
       Domain: "Regulatory Operations",
@@ -119,7 +146,10 @@ export const frameworkData = {
       ISO27701: "6.2.3 A.7.3.2-A.7.3.3 A.7.3.8-A.7.3.9 A.7.5.3-A.7.5.4 B.8.5.3-B.8.5.6",
       "EU AI ACT": "50.1-50.5 86.1-86.3 20.1 20.2 60.7 60.8",
       "NIST RMF": "Govern 6.1 Map 4.1",
-      SOC2: "CC2.3 P1.1 P1.2 P1.3"
+      SOC2: "CC2.3 P1.1 P1.2 P1.3",
+      "Key control activities": "• Monthly, the AI Product Manager reviews all AI system interfaces to verify appropriate AI disclosure notices using the Transparency Checklist • For each system update, the Development Lead completes the Change Impact Assessment form that includes transparency requirements verification • Quarterly, the UX Designer audits all user touchpoints for clarity of AI notifications using the UX Audit Tool • Before any significant system change, the Product Manager ensures updated disclosure documentation is prepared and approved by Legal • The Communications Manager maintains a stakeholder notification template for system changes that is reviewed annually by Legal and updated as needed",
+      "Required Evidence": "• Completed monthly AI Transparency Checklists for each system (PDF format) • Change Impact Assessment forms showing transparency requirements verification (PDF format) • Quarterly UX Audit reports with screenshots of AI disclosures (PDF format with attachments) • User interface mockups and implemented screens showing AI notifications (Image files) • Legal approval emails for disclosure language (Email archive) • Stakeholder notification templates with revision history (Word documents) • Sample communications sent to users regarding significant system changes (Email archives) • Record of automated decision-making notifications with timestamps (System logs)",
+      "Control test plan and procedures": "1 Select three AI systems and examine the last three monthly Transparency Checklists 2 For each selected system, access the live environment and verify AI disclosures are present, visible, and accurate 3 Review the last five Change Impact Assessments to confirm transparency requirements were evaluated 4 Select two significant system changes from the past six months and verify that: ◦ Disclosure documentation was updated prior to deployment ◦ Legal approval was obtained and documented ◦ Users were notified appropriately about the changes 5 Control passes if all transparency disclosures are present, accurate, and properly communicated; fails if disclosures are missing, inaccurate, or not properly communicated 6 If failure, the AI Product Manager must implement corrections within 5 business days and review all other system interfaces to ensure consistency"
     },
     {
       Domain: "Regulatory Operations",
@@ -131,7 +161,10 @@ export const frameworkData = {
       ISO27701: "8.2.3 A.7.2.8 A.7.3.1 A.7.4.3 A.7.4.6-A.7.4.8 B.8.2.6 B.8.4.1-B.8.4.2",
       "EU AI ACT": "11.1 11.3 18.1 19.1 19.2 71.2 71.3",
       "NIST RMF": "Map 4.1 Measure 2.12",
-      SOC2: "P3.1 P3.2 P3.3"
+      SOC2: "P3.1 P3.2 P3.3",
+      "Key control activities": "• Monthly, the Documentation Manager reviews the AI System Documentation Repository to ensure all required documentation is current and compliant • For each system update, the AI Engineer updates technical documentation and submits for review to the Technical Lead within 5 business days • Quarterly, the Compliance Officer conducts a documentation audit using the Documentation Completeness Checklist • Annually, the Records Manager reviews documentation retention policies against regulatory requirements and updates as needed • During system development, the AI Project Manager ensures documentation is created according to the Documentation Standards Guide",
+      "Required Evidence": "• AI System Documentation Repository inventory report showing all documents with last update dates (Excel format) • Technical documentation change logs with approvals (PDF format) • Quarterly Documentation Audit reports with findings and remediation actions (PDF format) • Annual Documentation Retention Policy review documentation (Word document) • Sample of critical AI system documentation (conformity assessments, impact analyses, test results) (Various formats) • Access logs for documentation repository showing appropriate permission controls (System logs) • Documentation Standards Guide with revision history (Word document) • Training records showing staff completion of documentation procedures training (LMS report)",
+      "Control test plan and procedures": "1 Select two AI systems and verify that all required documentation types are present in the repository 2 For each selected system, check that documentation was updated following the last three system changes 3 Review the last two quarterly documentation audits and verify that: ◦ All findings were documented ◦ Remediation actions were assigned ◦ Follow-up verification was completed 4 Select one high-risk AI system and verify retention of all required documentation per regulatory requirements 5 Verify access controls by confirming that only authorized personnel can access, modify, or delete documentation 6 Control passes if documentation is complete, current, and properly secured; fails if documentation is missing, outdated, or improperly managed 7 If failure, the Documentation Manager must create a remediation plan within 5 business days and implement corrections within 30 days"
     },
     {
       Domain: "Regulatory Operations",
@@ -143,7 +176,10 @@ export const frameworkData = {
       ISO27701: "6.2.3 A.7.3.6-A.7.3.7 A.7.3.10 A.7.4.3 B.8.3.1 B.8.5.7-B.8.5.8",
       "EU AI ACT": "72.1-72.4 79.4 80.4-80.5",
       "NIST RMF": "Govern 6.1 Measure 2.12",
-      SOC2: "CC1.5"
+      SOC2: "CC1.5",
+      "Key control activities": "• Daily, the Operations team reviews automated system monitoring alerts and documents issues in the Incident Management System • Weekly, the AI Performance Analyst reviews performance metrics against established thresholds using the Performance Dashboard • Monthly, the AI Product Manager reviews user feedback related to AI system performance using the Feedback Analysis Report • Quarterly, the AI Governance Committee reviews system performance trends and incident reports using the Quarterly Performance Review template • For high-risk AI systems, the Risk Manager conducts monthly detailed performance reviews against predefined risk thresholds",
+      "Required Evidence": "• Daily system monitoring logs with alert records and resolution documentation (System logs) • Weekly Performance Analysis Reports with metrics, trends, and anomalies identified (PDF format) • Monthly Feedback Analysis Reports with categorized user feedback and actions taken (Excel format) • Quarterly Performance Review reports with committee sign-off (PDF format) • Incident reports with investigation findings, corrective actions, and regulatory notifications when applicable (PDF format) • Post-incident review documentation showing root cause analysis and preventive measures (Word documents) • Regulatory authority notification records where required (Email archives) • Corrective Action implementation records with verification (PDF format)",
+      "Control test plan and procedures": "1 Review the last 30 days of system monitoring logs and verify that alerts were addressed per established procedures 2 Select three performance incidents from the past quarter and trace through the response process to confirm: ◦ Initial detection and logging occurred per procedures ◦ Appropriate escalation took place within required timeframes ◦ Investigation was thorough and well-documented ◦ Corrective actions were implemented and verified ◦ Required notifications were made to authorities (if applicable) 3 Review the last two Quarterly Performance Review reports and verify they were reviewed by the AI Governance Committee 4 For one high-risk AI system, review the last three monthly performance reviews against risk thresholds 5 Control passes if monitoring activities are consistently performed and documented, with appropriate response to identified issues; fails if monitoring is inconsistent or responses inadequate 6 If failure, the AI Operations Manager must immediately review monitoring processes and implement improvements within 15 business days"
     },
     {
       Domain: "System, Data and Model Lifecycle",
@@ -155,7 +191,10 @@ export const frameworkData = {
       ISO27701: "A.7.4.1-A.7.4.2 A.7.4.6-A.7.4.8 B.8.4.1-B.8.4.2",
       "EU AI ACT": "10.1-10.6",
       "NIST RMF": "Map 2.1",
-      SOC2: null
+      SOC2: null,
+      "Key control activities": "• Before data acquisition, the Data Steward completes the Data Quality Assessment form to verify relevance, representativeness, and statistical suitability • Monthly, the Data Quality Analyst runs the Data Quality Monitoring scripts and documents results in the Data Quality Report • Quarterly, the AI Ethics Officer conducts bias detection tests using the Bias Detection Framework and documents findings • For each training dataset update, the Data Engineer verifies data provenance using the Data Lineage Verification Checklist • Annually, the Data Governance Committee reviews data governance policies against regulatory requirements and updates as needed",
+      "Required Evidence": "• Completed Data Quality Assessment forms for all datasets used in AI systems (PDF format) • Monthly Data Quality Reports showing data validation results (PDF format) • Quarterly Bias Detection Test results with mitigation actions (PDF format) • Data Lineage Documentation showing clear provenance for all datasets (Excel format) • Data Processing Records showing transformation and validation steps (System logs) • Dataset bias assessment reports with mitigation strategies (PDF format) • Geographic and behavioral representation analysis for training datasets (Excel format) • Data validation test results showing statistical suitability (PDF format)",
+      "Control test plan and procedures": "1 Select three datasets used in AI systems and verify completed Data Quality Assessment forms exist 2 For selected datasets, verify documentation demonstrates: ◦ Relevance to intended purpose ◦ Representative of actual usage scenarios ◦ Statistically suitable sample size and distribution 3 Review the last two quarterly bias detection test reports and verify that: ◦ Tests were conducted using approved methodologies ◦ Findings were properly documented ◦ Mitigation actions were implemented and verified 4 For one high-risk AI system, verify complete data provenance documentation exists 5 Control passes if data governance processes are followed consistently with proper documentation; fails if data quality processes are inconsistent or inadequately documented 6 If failure, the Data Governance Manager must implement corrective actions within 10 business days and conduct a comprehensive review of all affected datasets"
     },
     {
       Domain: "System, Data and Model Lifecycle",
@@ -167,7 +206,10 @@ export const frameworkData = {
       ISO27701: "A.7.4.1-A.7.4.2 A.7.4.5-A.7.4.8 B.8.4.1-B.8.4.2",
       "EU AI ACT": null,
       "NIST RMF": "Map 1.6 Govern 1.7",
-      SOC2: "CC8.1 CC8.2"
+      SOC2: "CC8.1 CC8.2",
+      "Key control activities": "• Before project initiation, the AI Project Manager completes the System Requirements Specification using the approved template • During design phase, the AI Architect creates and updates the System Architecture Document that is reviewed by the Security and Privacy teams • At each development milestone, the AI Engineering Lead conducts a Technical Implementation Review using the Review Checklist • Before deployment, the Quality Assurance Manager performs a final validation using the Pre-Deployment Validation Checklist • Quarterly, the AI Governance Committee reviews a sample of systems to verify lifecycle documentation is complete",
+      "Required Evidence": "• System Requirements Specifications with stakeholder sign-off (PDF format) • System Architecture Documents with Security and Privacy review notes (PDF format) • Technical Implementation Review reports from each development milestone (PDF format) • Pre-Deployment Validation Checklist with sign-off from required stakeholders (PDF format) • Development decision logs documenting key implementation choices (Excel format) • System decommissioning plans for end-of-life systems (Word documents) • Test case documentation and results for system validation (PDF format) • Quarterly AI Governance Committee review reports (PDF format)",
+      "Control test plan and procedures": "1 Select two AI systems developed in the past year and verify that all lifecycle documentation exists: ◦ Requirements Specification ◦ Architecture Document ◦ Technical Implementation Reviews ◦ Pre-Deployment Validation 2 For each selected system, verify that Security and Privacy reviews were conducted and documented 3 Review one system's complete development history to confirm all required approvals were obtained at each phase 4 For a system currently in development, verify active documentation is being maintained according to procedures 5 Control passes if complete lifecycle documentation exists with appropriate approvals; fails if documentation is incomplete or approvals missing 6 If failure, the AI Project Manager must develop a remediation plan within 5 business days and implement corrections within 20 business days"
     },
     {
       Domain: "System, Data and Model Lifecycle",
@@ -179,7 +221,10 @@ export const frameworkData = {
       ISO27701: "A.7.2.6 A.7.2.7 B.8.5.6",
       "EU AI ACT": null,
       "NIST RMF": "Govern 1.6",
-      SOC2: null
+      SOC2: null,
+      "Key control activities": "• Quarterly, the Resource Manager updates the AI Resource Inventory using the Resource Management Tool • Monthly, the AI Engineering Lead reviews resource allocation and utilization using the Resource Utilization Report • Before new AI projects, the Project Manager completes the Resource Requirements Assessment using the approved template • Annually, the Training Manager assesses staff competencies against required skills using the Competency Assessment Framework • When resource dependencies change, the System Owner updates the System Dependency Documentation within 5 business days",
+      "Required Evidence": "• AI Resource Inventory showing data resources, tools, infrastructure, and human competencies (Excel format) • Monthly Resource Utilization Reports with analysis of usage patterns (PDF format) • Resource Requirements Assessments for all new AI projects (PDF format) • Annual Competency Assessment reports with gap analysis (PDF format) • System Dependency Documentation with revision history (Word documents) • Resource allocation meeting minutes showing decision-making (PDF format) • Infrastructure capacity planning documents (PDF format) • Tool license and capacity management records (Excel format)",
+      "Control test plan and procedures": "1 Review the AI Resource Inventory to verify it includes all required resource categories 2 Select two AI systems and verify that resource dependencies are accurately documented 3 Review the last three monthly Resource Utilization Reports to confirm regular monitoring occurs 4 For one new AI project, verify the Resource Requirements Assessment was completed before project initiation 5 Select five employees involved in AI development and verify current Competency Assessments exist 6 Control passes if resource management documentation is complete and up-to-date; fails if documentation is incomplete or outdated 7 If failure, the Resource Manager must update all affected documentation within 15 business days and implement process improvements to prevent recurrence"
     },
     {
       Domain: "System, Data and Model Lifecycle",
@@ -191,7 +236,10 @@ export const frameworkData = {
       ISO27701: "A.7.2.8 A.7.5.3 A.7.5.4 B.8.2.6 B.8.5.3",
       "EU AI ACT": "11.1-11.3 12.1-12.3 18.1",
       "NIST RMF": "Map 2.2 Map 3.3",
-      SOC2: null
+      SOC2: null,
+      "Key control activities": "• For each system release, the Technical Writer updates the Technical Documentation Package using the Documentation Checklist • Monthly, the AI Engineer reviews system logs to ensure automated logging is functioning properly • Quarterly, the Documentation Manager conducts a documentation audit using the Documentation Compliance Checklist • Before major version releases, the Quality Assurance team validates technical documentation accuracy using the Documentation Validation Process • When system characteristics change, the System Owner updates the System Specification Document within 10 business days",
+      "Required Evidence": "• Complete Technical Documentation Packages for each system version (PDF format) • Documentation Checklist with sign-off from required stakeholders (PDF format) • Monthly system logging verification reports (PDF format) • Quarterly Documentation Audit reports with findings and remediation (PDF format) • Documentation Validation testing results (PDF format) • System Specification Documents with revision history (Word documents) • System logs showing operational data collection (System logs) • Documentation retention schedule with compliance verification (Excel format)",
+      "Control test plan and procedures": "1 Select two AI systems and verify complete Technical Documentation Packages exist for the current version 2 For each selected system, verify documentation includes: ◦ System characteristics ◦ Design specifications ◦ Validation results ◦ Operational logs 3 Review system logs from the past 30 days to confirm automated logging is functioning properly 4 For one system that underwent changes in the past quarter, verify the System Specification Document was updated appropriately 5 Control passes if technical documentation is complete, accurate, and up-to-date; fails if documentation is incomplete, inaccurate, or outdated 6 If failure, the Documentation Manager must implement corrections within 10 business days and review all system documentation to identify similar issues"
     },
     {
       Domain: "System, Data and Model Lifecycle",
@@ -203,7 +251,10 @@ export const frameworkData = {
       ISO27701: "A.7.3.7 B.8.5.7 B.8.5.8",
       "EU AI ACT": 11.3,
       "NIST RMF": "Map 2.1",
-      SOC2: "CC8.1 CC8.2"
+      SOC2: "CC8.1 CC8.2",
+      "Key control activities": "• For each system change, the Change Manager completes the Change Request Form and obtains approval from the Change Advisory Board • Before implementing changes, the Test Manager verifies test plans using the Change Testing Checklist • After each change implementation, the Quality Assurance team validates the change using the Post-Implementation Verification Process • Monthly, the Version Control Administrator audits version control systems using the Version Control Audit Checklist • Quarterly, the Change Manager reviews change management metrics using the Change Management Dashboard",
+      "Required Evidence": "• Change Request Forms with appropriate approvals for all system changes (PDF format) • Change Advisory Board meeting minutes documenting change approvals (PDF format) • Pre-implementation test plans and results (PDF format) • Post-Implementation Verification reports (PDF format) • Version control system logs showing all component versions (System logs) • Version Control Audit reports (PDF format) • Change Management Dashboard reports showing metrics and trends (PDF format) • Documentation updates reflecting implemented changes (Various formats)",
+      "Control test plan and procedures": "1 Select five system changes from the past quarter and verify for each: ◦ Properly completed Change Request Form exists ◦ Change Advisory Board approval was obtained ◦ Testing was conducted and documented ◦ Post-implementation verification was performed 2 Review the version control system to confirm proper versioning of models, datasets, and code 3 Examine documentation to verify it was updated to reflect the implemented changes 4 Review the last two monthly Version Control Audits to confirm they were conducted properly 5 Control passes if change management procedures are consistently followed with proper documentation; fails if procedures are inconsistently followed or inadequately documented 6 If failure, the Change Manager must implement process improvements within 10 business days and conduct a comprehensive review of recent changes"
     },
     {
       Domain: "Security",
@@ -215,7 +266,10 @@ export const frameworkData = {
       ISO27701: "14.2.1 14.2.2",
       "EU AI ACT": null,
       "NIST RMF": null,
-      SOC2: "CC2.3 CC3.1 CC3.2 CC5.2 CC7.2 CC7.3 CC9.3"
+      SOC2: "CC2.3 CC3.1 CC3.2 CC5.2 CC7.2 CC7.3 CC9.3",
+      "Key control activities": "• Monthly, the Security Manager reviews and updates security policies and standards using the Policy Review Checklist • Quarterly, the Security Architecture team conducts architecture reviews of AI systems using the Security Architecture Assessment Framework • The Security Operations team performs continuous monitoring of security controls using automated tools and manual checks • Annually, the Risk Manager conducts a comprehensive security risk assessment using the Risk Assessment Methodology • The Incident Response team maintains and tests incident response plans quarterly using tabletop exercises",
+      "Required Evidence": "• Security policies and standards with revision history (PDF format) • Security Architecture Assessment reports (PDF format) • Continuous monitoring logs and alerts (System logs) • Annual Security Risk Assessment reports (PDF format) • Incident Response Plan test results (PDF format) • Security metrics and KPI reports (Dashboard) • Third-party security assessment reports (PDF format) • Business continuity test results (PDF format)",
+      "Control test plan and procedures": "1 Review the last three monthly policy updates to verify the Policy Review Checklist was properly completed 2 Select two AI systems and verify Security Architecture Assessments were conducted in the past year 3 Review continuous monitoring logs for the past 30 days to confirm: ◦ Automated monitoring tools are functioning ◦ Alerts are being investigated and resolved ◦ Manual checks are being performed as scheduled 4 Verify the annual security risk assessment was completed and includes: ◦ All critical systems and assets ◦ Threat and vulnerability analysis ◦ Risk treatment plans 5 Review the last two quarterly incident response tests to confirm: ◦ All key scenarios were tested ◦ Lessons learned were documented ◦ Improvements were implemented 6 Control passes if security governance activities are consistently performed and documented; fails if activities are inconsistent or documentation is incomplete 7 If failure, the Security Manager must implement corrective actions within 15 business days"
     },
     {
       Domain: "Security",
@@ -227,7 +281,10 @@ export const frameworkData = {
       ISO27701: "9.2.1 9.2.2 9.2.4",
       "EU AI ACT": null,
       "NIST RMF": null,
-      SOC2: "CC6.1 CC6.2 CC6.3"
+      SOC2: "CC6.1 CC6.2 CC6.3",
+      "Key control activities": "• Weekly, the IAM team reviews access provisioning requests using the Access Request Workflow • Monthly, the Security team conducts access reviews using the Access Review Tool • Quarterly, the IAM Manager reviews privileged access rights using the Privileged Access Review Checklist • The IAM system automatically logs all access attempts and generates alerts for suspicious activities • HR notifies the IAM team of personnel changes within 24 hours for access deprovisioning",
+      "Required Evidence": "• Access request and approval records (System logs) • Monthly access review reports with findings (PDF format) • Privileged access review documentation (PDF format) • Access provisioning and deprovisioning logs (System logs) • Authentication configuration settings (System configs) • Access violation investigation reports (PDF format) • User account lifecycle documentation (PDF format) • Multi-factor authentication enrollment records (System logs)",
+      "Control test plan and procedures": "1 Select a sample of 25 access requests from the past quarter and verify: ◦ Proper approvals were obtained ◦ Access was provisioned correctly ◦ Documentation is complete 2 Review the last three monthly access reviews to confirm: ◦ All systems were included ◦ Inappropriate access was identified and removed ◦ Reviews were properly documented 3 Select 10 terminated employees and verify: ◦ Access was removed within 24 hours ◦ Deprovisioning was documented ◦ Access attempts after termination were logged 4 Verify authentication mechanisms: ◦ MFA is enforced for privileged access ◦ Password policies meet standards ◦ Failed login attempts are logged and alerts generated 5 Control passes if IAM processes are consistently followed and documented; fails if processes are inconsistent or documentation incomplete 6 If failure, the IAM Manager must implement corrective actions within 5 business days"
     },
     {
       Domain: "Security",
@@ -239,7 +296,10 @@ export const frameworkData = {
       ISO27701: "14.2.1 14.2.2",
       "EU AI ACT": null,
       "NIST RMF": null,
-      SOC2: "CC5.2 CC7.1"
+      SOC2: "CC5.2 CC7.1",
+      "Key control activities": "• The Development team follows secure coding standards and guidelines documented in the Secure Development Guide • Security testing is performed at each phase of development using automated tools and manual testing • Code reviews include security checks using the Security Code Review Checklist • The Security team maintains and updates secure configuration baselines for all systems • Vulnerability assessments are conducted monthly using approved scanning tools",
+      "Required Evidence": "• Secure coding standards documentation (PDF format) • Security testing results and reports (PDF format) • Code review records with security findings (System logs) • Secure configuration baseline documents (Word format) • Vulnerability assessment reports (PDF format) • Security defect tracking logs (System logs) • Secure development environment configurations (System configs) • Security training records for developers (LMS records)",
+      "Control test plan and procedures": "1 Review code repositories to verify secure coding standards are being followed 2 Select three recent software releases and verify: ◦ Security testing was performed at each phase ◦ Code reviews included security checks ◦ Vulnerabilities were remediated before deployment 3 Examine secure configuration baselines to confirm: ◦ They are documented and maintained ◦ Systems comply with baselines ◦ Deviations are approved and documented 4 Review the last three monthly vulnerability assessments to verify: ◦ All systems were scanned ◦ Critical vulnerabilities were addressed ◦ Reports were distributed to stakeholders 5 Control passes if secure development practices are consistently followed; fails if practices are inconsistent or security controls are bypassed 6 If failure, the Development Manager must implement corrective actions within 10 business days"
     },
     {
       Domain: "Security",
@@ -275,7 +335,10 @@ export const frameworkData = {
       ISO27701: "7.2.2 7.2.5",
       "EU AI ACT": "14.1-14.5 26.2 4.1",
       "NIST RMF": "Govern 3.2 Map 3.4 Map 3.5",
-      SOC2: "CC1.1 CC2.1"
+      SOC2: "CC1.1 CC2.1",
+      "Key control activities": "Monthly, the AI Oversight Committee reviews system performance reports and intervention logs - Quarterly training sessions conducted for oversight personnel on system capabilities and limitations - Weekly review of high-risk AI system decisions by domain experts - Implementation of human-in-the-loop controls for critical decision points - Regular testing of override mechanisms and escalation procedures - Documentation of all human interventions and their outcomes",
+      "Required Evidence": "AI System Oversight Manual with defined roles and procedures (PDF) - Training records and competency assessments for oversight personnel (Excel) - System performance reports with human review annotations (PDF) - Intervention logs documenting override decisions and rationale (Excel) - Minutes from AI Oversight Committee meetings (PDF) - Technical documentation of human-in-the-loop implementation (PDF) - Escalation procedure test results and updates (PDF)",
+      "Control test plan and procedures": "1. Review the last 6 months of oversight committee meeting minutes 2. Verify training completion for all oversight personnel 3. Sample 10 high-risk decisions to confirm human review was performed 4. Test override mechanisms on non-production systems to verify functionality 5. Review intervention logs for proper documentation and follow-up 6. Interview 3 oversight personnel to assess understanding of procedures 7. Control passes if all samples show compliance with procedures; fails if any critical steps were missed 8. For failures, Oversight Committee must review and update procedures within 15 days"
     },
     {
       Domain: "Safe Responsible AI",
@@ -287,7 +350,10 @@ export const frameworkData = {
       ISO27701: "7.2.3 7.2.4",
       "EU AI ACT": "5.1 5.2 9.1-9.3",
       "NIST RMF": "Map 1.1 Map 3.1 Map 3.2 Measure 3.1 Measure 3.2",
-      SOC2: "CC4.1 CC5.1"
+      SOC2: "CC4.1 CC5.1",
+      "Key control activities": "Quarterly safety impact assessments for all AI systems - Monthly review of safety monitoring metrics and incident reports - Implementation of safety boundaries and kill switches for high-risk systems - Regular testing of safety mechanisms and fail-safes - Documentation of safety requirements in system design - Continuous monitoring for emerging safety risks - Regular updates to safety controls based on operational feedback",
+      "Required Evidence": "Safety Impact Assessment Reports (PDF) - Safety monitoring dashboards and metrics (Excel) - Incident reports and resolution documentation (PDF) - Safety mechanism test results (PDF) - System design documents with safety controls (PDF) - Risk register with safety-related entries (Excel) - Safety control update logs (Excel) - Training records for safety procedures (PDF)",
+      "Control test plan and procedures": "1. Review last 4 quarterly safety impact assessments 2. Verify implementation of identified safety controls 3. Test emergency stop procedures on 3 critical systems 4. Review incident reports for proper handling and resolution 5. Verify safety monitoring systems are active and logging 6. Sample 5 high-risk operations for safety compliance 7. Control passes if all safety mechanisms function as designed; fails if any critical safety control is compromised 8. For failures, Safety Team must implement fixes within 24 hours"
     },
     {
       Domain: "Safe Responsible AI",
@@ -299,7 +365,10 @@ export const frameworkData = {
       ISO27701: "7.2.8",
       "EU AI ACT": "8.1 8.2 15.1 15.4 15.5",
       "NIST RMF": "Map 2.1 Map 2.2 Measure 4.2 Measure 4.3",
-      SOC2: "CC7.1 CC8.1"
+      SOC2: "CC7.1 CC8.1",
+      "Key control activities": "Monthly robustness testing including edge cases and stress conditions - Regular adversarial testing of AI systems - Implementation of data quality checks and validation - Continuous monitoring of system performance metrics - Regular updates to robustness measures based on operational data - Documentation of system limitations and boundary conditions - Implementation of fallback mechanisms for system failures",
+      "Required Evidence": "Robustness Test Reports and Results (PDF) - System Performance Monitoring Logs (Excel) - Adversarial Test Documentation (PDF) - Data Quality Reports (Excel) - System Boundary Documentation (PDF) - Fallback Mechanism Specifications (PDF) - Incident Response Plans (PDF) - Performance Trend Analysis Reports (Excel)",
+      "Control test plan and procedures": "1. Execute standard robustness test suite on all systems 2. Perform adversarial testing on 3 critical systems 3. Review data quality metrics for last 6 months 4. Test fallback mechanisms under various failure scenarios 5. Verify monitoring systems capture performance degradation 6. Review boundary condition handling in 5 test cases 7. Control passes if systems maintain performance under all test conditions; fails if any critical vulnerability is found 8. For failures, Engineering team must implement fixes within 48 hours"
     },
     {
       Domain: "Safe Responsible AI",
@@ -311,7 +380,10 @@ export const frameworkData = {
       ISO27701: "7.2.1",
       "EU AI ACT": "50.2 50.3 50.4 50.5",
       "NIST RMF": "Govern 4.2 Map 2.2 Map 2.3 Measure 2.8",
-      SOC2: "CC2.2 CC2.3"
+      SOC2: "CC2.2 CC2.3",
+      "Key control activities": "Implementation of explainability tools for AI decisions - Regular review of explanation quality and comprehensibility - Documentation of system logic and decision criteria - Training for staff on explaining AI decisions to stakeholders - Regular updates to explanation methods based on feedback - Maintenance of system capability documentation - Regular assessment of explanation effectiveness",
+      "Required Evidence": "Explainability Method Documentation (PDF) - Decision Explanation Logs (Excel) - System Logic Documentation (PDF) - Training Materials for Staff (PDF) - Stakeholder Feedback Reports (Excel) - Capability Documentation (PDF) - Explanation Quality Assessment Reports (PDF) - User Understanding Test Results (Excel)",
+      "Control test plan and procedures": "1. Review explanation quality for 10 random decisions 2. Verify documentation completeness for all systems 3. Test explanation tools on 5 complex decisions 4. Survey stakeholders on explanation clarity 5. Review staff training completion records 6. Assess explanation consistency across similar cases 7. Control passes if explanations are clear and accurate; fails if stakeholders cannot understand decisions 8. For failures, AI team must revise explanation methods within 20 days"
     },
     {
       Domain: "Safe Responsible AI",
@@ -323,7 +395,10 @@ export const frameworkData = {
       ISO27701: "7.2.6",
       "EU AI ACT": "5.1 26.4",
       "NIST RMF": "Measure 2.11 Govern 5.2 Measure 2.2",
-      SOC2: "CC1.3 CC5.3"
+      SOC2: "CC1.3 CC5.3",
+      "Key control activities": "Regular fairness assessments of AI system outputs - Bias testing across protected characteristics - Data representativeness analysis for training sets - Implementation of bias mitigation techniques - Continuous monitoring of fairness metrics - Regular updates to fairness measures based on assessments - Documentation of bias incidents and resolutions",
+      "Required Evidence": "Fairness Assessment Reports (PDF) - Bias Test Results (Excel) - Data Representativeness Analysis (PDF) - Bias Mitigation Documentation (PDF) - Fairness Monitoring Logs (Excel) - Incident Resolution Reports (PDF) - Training Data Audit Reports (Excel) - Fairness Metric Trending Reports (PDF)",
+      "Control test plan and procedures": "1. Review fairness metrics for last 6 months 2. Test for bias across all protected characteristics 3. Verify data representativeness in training sets 4. Review effectiveness of bias mitigation measures 5. Audit fairness monitoring systems 6. Sample 10 decisions for fairness compliance 7. Control passes if no significant bias is detected; fails if any protected group is disadvantaged 8. For failures, AI Ethics Committee must review and implement corrections within 10 days"
     },
     {
       Domain: "Privacy",
@@ -335,7 +410,10 @@ export const frameworkData = {
       ISO27701: "6.1.1 6.1.2 6.2.1-6.2.4 7.2.1-7.2.3 7.2.5 7.2.7 12.2.1 A.7.4.1-A.7.4.9 B.8.4",
       "EU AI ACT": "10.5 26.9 27.4",
       "NIST RMF": null,
-      SOC2: "P1.1 P1.2 P1.3"
+      SOC2: "P1.1 P1.2 P1.3",
+      "Key control activities": "Privacy impact assessments for all new AI systems and major changes - Regular review and updates of privacy policies and procedures - Integration of privacy requirements into system development lifecycle - Training for all staff on privacy principles and requirements - Regular privacy governance committee meetings - Documentation of privacy decisions and rationale - Monitoring of special category data processing",
+      "Required Evidence": "Privacy Impact Assessment Reports (PDF) - Privacy Policies and Procedures (PDF) - Privacy Training Records (Excel) - Privacy Governance Committee Minutes (PDF) - Privacy Decision Logs (Excel) - Special Category Data Processing Register (Excel) - Privacy Control Effectiveness Reports (PDF) - Privacy Resource Allocation Records (Excel)",
+      "Control test plan and procedures": "1. Review PIAs for all new systems in last quarter 2. Verify privacy requirements in system specifications 3. Check training completion for all staff 4. Review special category data processing logs 5. Assess effectiveness of privacy controls 6. Verify governance committee activities 7. Control passes if privacy is embedded in all processes; fails if any privacy requirements are bypassed 8. For failures, Privacy Officer must implement corrective actions within 15 days"
     },
     {
       Domain: "Privacy",
@@ -347,7 +425,10 @@ export const frameworkData = {
       ISO27701: "8.2.1-8.2.4 8.3.1-8.3.3 A.7.2.1-A.7.2.8 A.7.3.1-A.7.3.10 7.4.5 A.7.5.1-A.7.5.4 B.8.2 B.8.3 B.8.4.2 B.8.5",
       "EU AI ACT": null,
       "NIST RMF": null,
-      SOC2: "P2.1 P2.2 P3.1-P3.3 P4.1-P4.3"
+      SOC2: "P2.1 P2.2 P3.1-P3.3 P4.1-P4.3",
+      "Key control activities": "Regular updates to data inventory and classification - Implementation of data retention schedules - Management of consent records and preferences - Processing of data subject access requests - Regular data quality assessments - Implementation of data minimization practices - Secure data disposal procedures",
+      "Required Evidence": "Data Inventory and Classification Records (Excel) - Consent Management Logs (Excel) - Data Subject Request Records (Excel) - Data Quality Assessment Reports (PDF) - Data Retention Schedule (PDF) - Data Disposal Certificates (PDF) - Data Processing Records (Excel) - Data Minimization Review Reports (PDF)",
+      "Control test plan and procedures": "1. Review data inventory completeness and accuracy 2. Verify consent records for sample of processing activities 3. Test data subject request handling process 4. Check data retention implementation 5. Verify secure disposal procedures 6. Assess data minimization effectiveness 7. Control passes if all data management processes are followed; fails if any personal data is mishandled 8. For failures, Data Protection team must correct issues within 5 days"
     },
     {
       Domain: "Privacy",
@@ -359,7 +440,10 @@ export const frameworkData = {
       ISO27701: "12.2.2 15.2.1 16.2.1 16.2.2 17.2.1 18.2.1 18.2.2 A.7.2.5-A.7.2.7 A.7.3.6 B.8.2.4 B.8.2.5",
       "EU AI ACT": null,
       "NIST RMF": null,
-      SOC2: "P6.1 P6.2 P6.3 P6.4 P6.5"
+      SOC2: "P6.1 P6.2 P6.3 P6.4 P6.5",
+      "Key control activities": "Regular privacy compliance audits - Continuous monitoring of data processing activities - Privacy incident response procedures - Supplier privacy compliance assessments - Privacy metrics tracking and reporting - Privacy breach notification procedures - Regular privacy control assessments",
+      "Required Evidence": "Privacy Audit Reports (PDF) - Privacy Monitoring Logs (Excel) - Incident Response Records (PDF) - Supplier Assessment Reports (PDF) - Privacy Metrics Dashboard (Excel) - Breach Notification Records (PDF) - Privacy Control Assessment Reports (PDF) - Compliance Documentation (PDF)",
+      "Control test plan and procedures": "1. Review last privacy audit findings and remediation 2. Test incident response procedures 3. Verify supplier compliance monitoring 4. Check privacy metrics tracking 5. Review breach notification process 6. Assess privacy control effectiveness 7. Control passes if compliance is maintained; fails if any privacy requirements are not met 8. For failures, Privacy Team must implement corrections within 10 days"
     },
     {
       Domain: "Privacy",
@@ -371,7 +455,10 @@ export const frameworkData = {
       ISO27701: "9.2.1-9.2.4 10.2.1-10.2.2 11.2.1-11.2.2 13.2.1 14.2.1-14.2.2 A.7.4.5 A.7.4.9 B.8.4.3",
       "EU AI ACT": null,
       "NIST RMF": null,
-      SOC2: "P5.1 P5.2 P5.3 P5.4 P5.5 P5.6"
+      SOC2: "P5.1 P5.2 P5.3 P5.4 P5.5 P5.6",
+      "Key control activities": "Implementation of encryption standards - Role-based access control deployment - Data minimization techniques implementation - Regular testing of privacy mechanisms - Documentation of technical controls - Updates to privacy-enhancing technologies - Integration of privacy controls in architecture",
+      "Required Evidence": "Encryption Implementation Records (PDF) - Access Control Matrix (Excel) - Privacy Mechanism Test Results (PDF) - Technical Control Documentation (PDF) - Architecture Review Reports (PDF) - Technology Update Logs (Excel) - Security Configuration Standards (PDF) - Effectiveness Test Reports (PDF)",
+      "Control test plan and procedures": "1. Verify encryption implementation 2. Test access control effectiveness 3. Review data minimization techniques 4. Check privacy mechanism testing 5. Assess technical documentation 6. Verify architecture integration 7. Control passes if all technical controls are effective; fails if any privacy mechanism is compromised 8. For failures, Technical Team must implement fixes within 24 hours"
     },
     {
       Domain: "Assurance and Audit",
@@ -383,7 +470,10 @@ export const frameworkData = {
       ISO27701: "8.2.3 18.2.2 A.7.2.5 A.7.4.3",
       "EU AI ACT": "9.7-9.8 17.1-17.2 60.1-60.9 61.1 61.2",
       "NIST RMF": "Map 2.3 Measure 2.1 Measure 2.3 Measure 2.5",
-      SOC2: "PI1.1 PI1.2 CC4.1"
+      SOC2: "PI1.1 PI1.2 CC4.1",
+      "Key control activities": "Annual internal audit program execution - Quarterly control assessments - Regular system behavior validation - Documentation of audit findings and recommendations - Tracking of remediation activities - Verification of control effectiveness - Regular updates to audit procedures",
+      "Required Evidence": "Internal Audit Reports (PDF) - Control Assessment Records (Excel) - System Validation Results (PDF) - Audit Finding Logs (Excel) - Remediation Tracking Records (Excel) - Control Effectiveness Reports (PDF) - Audit Program Documentation (PDF) - Assessment Methodology Documents (PDF)",
+      "Control test plan and procedures": "1. Review annual audit program coverage 2. Verify completion of quarterly assessments 3. Check system validation documentation 4. Review remediation of audit findings 5. Assess control effectiveness measures 6. Verify audit procedure updates 7. Control passes if audit program is comprehensive and effective; fails if significant gaps exist 8. For failures, Audit Committee must revise program within 30 days"
     },
     {
       Domain: "Assurance and Audit",
@@ -395,7 +485,10 @@ export const frameworkData = {
       ISO27701: "7.2.1",
       "EU AI ACT": "20.1 22.3-22.4 40.1 43.1-43.4 44.2 44.3",
       "NIST RMF": "Measure 1.3 Measure 4.2 Govern 4.3",
-      SOC2: "CC4.2 CC3.1"
+      SOC2: "CC4.2 CC3.1",
+      "Key control activities": "Selection and engagement of qualified assessors - Coordination of independent assessments - Maintenance of certification requirements - Implementation of corrective actions - Tracking of certification status - Documentation of assessment results - Regular review of certification needs",
+      "Required Evidence": "Independent Assessment Reports (PDF) - Certification Records (PDF) - Assessor Qualification Documents (PDF) - Corrective Action Plans (Excel) - Certification Status Tracker (Excel) - Assessment Finding Logs (Excel) - Remediation Evidence (PDF) - Certification Review Reports (PDF)",
+      "Control test plan and procedures": "1. Verify assessor qualifications 2. Review assessment scope and methodology 3. Check certification status and validity 4. Track corrective action implementation 5. Verify assessment documentation 6. Review certification maintenance 7. Control passes if assessments are properly conducted and certifications maintained; fails if requirements not met 8. For failures, Compliance Team must address within 20 days"
     },
     {
       Domain: "Assurance and Audit",
@@ -407,7 +500,10 @@ export const frameworkData = {
       ISO27701: "7.2.5",
       "EU AI ACT": "41.1-41.2 42.1-42.2",
       "NIST RMF": "Measure 2.6 Measure 2.7",
-      SOC2: "CC7.1"
+      SOC2: "CC7.1",
+      "Key control activities": "Regular security testing execution - Safety control validation - Penetration testing of systems - Review of fail-safe mechanisms - Documentation of test results - Implementation of security improvements - Monitoring of security metrics",
+      "Required Evidence": "Security Test Reports (PDF) - Safety Validation Records (PDF) - Penetration Test Results (PDF) - Control Validation Logs (Excel) - Security Metrics Dashboard (Excel) - Test Methodology Documentation (PDF) - Remediation Tracking Records (Excel) - Security Assessment Reports (PDF)",
+      "Control test plan and procedures": "1. Execute security test suite 2. Validate safety controls 3. Review penetration test results 4. Check fail-safe mechanisms 5. Verify security metrics 6. Assess control effectiveness 7. Control passes if all safety and security measures are effective; fails if vulnerabilities found 8. For failures, Security Team must remediate within 48 hours"
     },
     {
       Domain: "Operational Monitoring",
@@ -419,7 +515,10 @@ export const frameworkData = {
       ISO27701: "12.2.2 A.7.4.3",
       "EU AI ACT": "26.5 72.1 72.2 72.3 72.4",
       "NIST RMF": "Measure 1.2 Measure 2.4 Manage 2.2 Manage 2.4",
-      SOC2: "CC4.1 CC4.2 A1.1 A1.2"
+      SOC2: "CC4.1 CC4.2 A1.1 A1.2",
+      "Key control activities": "Implementation of automated monitoring systems - Regular review of performance metrics - Anomaly detection and alerting - Performance trend analysis - Documentation of monitoring findings - Calibration of monitoring thresholds - Regular validation of monitoring effectiveness",
+      "Required Evidence": "System Performance Reports (PDF) - Monitoring Dashboard Screenshots (PDF) - Alert Logs (Excel) - Performance Trend Analysis (PDF) - Issue Resolution Records (Excel) - Monitoring Configuration Documents (PDF) - Threshold Review Reports (PDF) - Validation Test Results (Excel)",
+      "Control test plan and procedures": "1. Verify monitoring system coverage 2. Review performance metric tracking 3. Test anomaly detection capabilities 4. Check alert response procedures 5. Validate monitoring thresholds 6. Review trend analysis process 7. Control passes if monitoring is effective and issues are detected; fails if significant issues are missed 8. For failures, Operations Team must adjust monitoring within 24 hours"
     },
     {
       Domain: "Operational Monitoring",
@@ -431,7 +530,10 @@ export const frameworkData = {
       ISO27701: "12.2.2",
       "EU AI ACT": "12.1-12.3 19.1-19.2 21.2 26.6",
       "NIST RMF": "Govern 4.3",
-      SOC2: "CC7.2 CC7.3"
+      SOC2: "CC7.2 CC7.3",
+      "Key control activities": "Implementation of comprehensive logging systems - Regular log review and analysis - Protection of log integrity - Management of log retention - Log access control implementation - Regular testing of logging systems - Coordination with incident response",
+      "Required Evidence": "System Log Configurations (PDF) - Log Review Reports (PDF) - Log Protection Measures (PDF) - Retention Schedule Documentation (PDF) - Access Control Lists (Excel) - Log Test Results (PDF) - Incident Investigation Logs (Excel) - Compliance Verification Reports (PDF)",
+      "Control test plan and procedures": "1. Verify logging system configuration 2. Review log retention implementation 3. Test log access controls 4. Check log integrity measures 5. Verify incident investigation capability 6. Review compliance reporting 7. Control passes if logging is comprehensive and secure; fails if logs are incomplete or compromised 8. For failures, Security Team must correct within 12 hours"
     },
     {
       Domain: "Operational Monitoring",
@@ -443,7 +545,10 @@ export const frameworkData = {
       ISO27701: "A.7.4.3 A.7.3.6",
       "EU AI ACT": "17.1 72.1 72.2 72.3 72.4",
       "NIST RMF": "Manage 4.1 Manage 4.2",
-      SOC2: "CC3.3 A1.3"
+      SOC2: "CC3.3 A1.3",
+      "Key control activities": "Regular performance review meetings - Collection and analysis of improvement data - Development of improvement plans - Implementation of approved changes - Validation of improvements - Documentation of lessons learned - Regular stakeholder feedback collection",
+      "Required Evidence": "Improvement Planning Documents (PDF) - Performance Analysis Reports (PDF) - Change Implementation Records (Excel) - Validation Test Results (PDF) - Stakeholder Feedback Logs (Excel) - Lessons Learned Repository (PDF) - Success Metrics Reports (Excel) - Review Meeting Minutes (PDF)",
+      "Control test plan and procedures": "1. Review improvement planning process 2. Verify data collection methods 3. Check implementation tracking 4. Validate improvement effectiveness 5. Review stakeholder feedback 6. Assess lessons learned process 7. Control passes if improvements are effective and documented; fails if changes don't meet objectives 8. For failures, Process Owner must revise approach within 20 days"
     },
     {
       Domain: "Third Party & Supply Chain",
@@ -455,19 +560,25 @@ export const frameworkData = {
       ISO27701: "15.2.1 A.7.2.6-A.7.2.7 B.8.5.6-B.8.5.8",
       "EU AI ACT": "25.1 25.2 25.3 25.4",
       "NIST RMF": "Map 4.1 Govern 6.1",
-      SOC2: "CC2.3"
+      SOC2: "CC2.3",
+      "Key control activities": "Documentation of third-party responsibilities - Regular review of supplier agreements - Monitoring of supplier compliance - Management of handover processes - Verification of technical access rights - Protection of intellectual property - Regular communication with suppliers",
+      "Required Evidence": "Third-Party Agreements (PDF) - Responsibility Matrix (Excel) - Compliance Monitoring Reports (PDF) - Handover Documentation (PDF) - Access Rights Register (Excel) - IP Protection Records (PDF) - Communication Logs (Excel) - Supplier Meeting Minutes (PDF)",
+      "Control test plan and procedures": "1. Review supplier agreement documentation 2. Verify responsibility assignments 3. Check compliance monitoring records 4. Test handover procedures 5. Verify access rights management 6. Review IP protection measures 7. Control passes if responsibilities are clear and managed; fails if accountability gaps exist 8. For failures, Vendor Management must correct within 15 days"
     },
     {
       Domain: "Third Party & Supply Chain",
       Master: "TP-2",
       Topic: "Supplier Risk Management",
       "Control Statement": "The organisation shall implement comprehensive processes to identify, assess, manage, and monitor risks associated with third-party AI suppliers and service providers throughout the engagement lifecycle. This includes evaluating supplier capabilities during selection, establishing security and privacy requirements in supplier agreements, maintaining contingency plans for critical third-party dependencies, and implementing continuous monitoring of supplier performance and compliance. The organisation shall regularly assess supplier adherence to established requirements, including security standards, privacy requirements, and service level agreements. Performance monitoring must include collection and evaluation of feedback, documentation of monitoring results, and implementation of appropriate actions when issues are identified. Regular reviews of supplier risk assessments and performance metrics shall inform decisions about continuing or modifying supplier relationships.",
-      ISO42001: "A.10.3",
+      ISO42001: "A.10.2",
       ISO27001: "A.15.1 A.15.2",
-      ISO27701: "15.2.1 A.7.2.6 A.7.5.1-A.7.5.2 B.8.5.1-B.8.5.2",
-      "EU AI ACT": 25.4,
-      "NIST RMF": "Govern 5.1 Manage 3.1 Govern 6.1 Govern 6.2",
-      SOC2: "CC9.2"
+      ISO27701: "15.2.1 15.2.2",
+      "EU AI ACT": "25.1 25.2 25.3 25.4",
+      "NIST RMF": "Map 4.1 Govern 6.1",
+      SOC2: "CC9.1 CC9.2",
+      "Key control activities": "Regular supplier risk assessments - Performance monitoring and reporting - Security and privacy requirement verification - Contingency planning for critical suppliers - Service level agreement monitoring - Regular supplier reviews - Documentation of risk mitigation measures",
+      "Required Evidence": "Supplier Risk Assessment Reports (PDF) - Performance Monitoring Dashboards (Excel) - Security Assessment Results (PDF) - Contingency Plans (PDF) - SLA Monitoring Reports (Excel) - Supplier Review Minutes (PDF) - Risk Mitigation Records (Excel) - Compliance Verification Reports (PDF)",
+      "Control test plan and procedures": "1. Review supplier risk assessment process 2. Verify performance monitoring implementation 3. Check security requirement compliance 4. Test contingency plan effectiveness 5. Review SLA monitoring results 6. Assess supplier review process 7. Control passes if risks are effectively managed; fails if significant risks are unaddressed 8. For failures, Risk Management must implement corrections within 30 days"
     },
     {
       Domain: "Transparency & Communication",
@@ -528,6 +639,81 @@ export const frameworkData = {
       "EU AI ACT": 73.6,
       "NIST RMF": "Manage 4.3",
       SOC2: "P6.5"
+    },
+    {
+      Domain: "Compliance & Oversight",
+      Master: "CO-1",
+      Topic: "Regulatory Compliance",
+      "Control Statement": "The organisation shall establish and maintain processes to identify, assess, and comply with all applicable laws, regulations, and standards relevant to AI systems. This includes maintaining a compliance register, conducting regular compliance assessments, implementing required controls, and documenting evidence of compliance. The organisation must ensure timely updates to compliance processes when regulations change and maintain clear communication channels with regulatory authorities.",
+      ISO42001: "A.7.2",
+      ISO27001: "A.18.1",
+      ISO27701: "6.1.1 6.1.2",
+      "EU AI ACT": "26.1 26.2 26.3",
+      "NIST RMF": "Govern 1.1 Govern 1.2",
+      SOC2: "CC1.2",
+      "Key control activities": "Regular compliance assessments - Maintenance of compliance register - Monitoring of regulatory changes - Implementation of compliance controls - Documentation of compliance evidence - Regular communication with authorities - Training on compliance requirements",
+      "Required Evidence": "Compliance Register (Excel) - Assessment Reports (PDF) - Regulatory Update Logs (Excel) - Control Implementation Records (PDF) - Compliance Evidence Repository (PDF) - Communication Records (PDF) - Training Materials (PDF) - Audit Trail Documentation (Excel)",
+      "Control test plan and procedures": "1. Review compliance register completeness 2. Verify assessment documentation 3. Check regulatory update process 4. Test compliance control effectiveness 5. Review communication records 6. Verify training completion 7. Control passes if compliance is maintained; fails if requirements are not met 8. For failures, Compliance Team must address within 10 days"
+    },
+    {
+      Domain: "Compliance & Oversight",
+      Master: "CO-2",
+      Topic: "Oversight Mechanisms",
+      "Control Statement": "The organisation shall implement effective oversight mechanisms for AI systems, including establishment of governance bodies, clear reporting lines, and regular review processes. This includes defining roles and responsibilities for oversight, implementing monitoring and reporting procedures, and ensuring adequate resources for oversight activities. The organisation must maintain documentation of oversight activities and decisions, including rationale for key determinations and follow-up actions.",
+      ISO42001: "A.6.1",
+      ISO27001: "A.5.1",
+      ISO27701: "6.1.1",
+      "EU AI ACT": "29.1 29.2 29.3 29.4",
+      "NIST RMF": "Govern 2.1 Govern 2.2",
+      SOC2: "CC1.3 CC1.4",
+      "Key control activities": "Establishment of oversight committees - Regular governance meetings - Documentation of oversight decisions - Resource allocation reviews - Monitoring of oversight effectiveness - Regular reporting to stakeholders - Review of oversight mechanisms",
+      "Required Evidence": "Governance Structure Documentation (PDF) - Committee Meeting Minutes (PDF) - Decision Logs (Excel) - Resource Allocation Reports (Excel) - Effectiveness Reviews (PDF) - Stakeholder Reports (PDF) - Oversight Process Documentation (PDF) - Performance Metrics (Excel)",
+      "Control test plan and procedures": "1. Review governance structure 2. Verify committee activities 3. Check decision documentation 4. Review resource allocation 5. Assess oversight effectiveness 6. Verify reporting processes 7. Control passes if oversight is effective; fails if governance gaps exist 8. For failures, Governance Committee must correct within 20 days"
+    },
+    {
+      Domain: "Incident Management",
+      Master: "IM-1",
+      Topic: "Incident Response Planning",
+      "Control Statement": "The organisation shall establish and maintain an incident response plan for AI systems that defines procedures for identifying, containing, and resolving incidents. This includes defining incident classification criteria, establishing response teams and procedures, implementing communication protocols, and maintaining necessary documentation. The organisation must regularly test and update incident response capabilities to ensure effectiveness.",
+      ISO42001: "A.8.2",
+      ISO27001: "A.16.1",
+      ISO27701: "6.13.1",
+      "EU AI ACT": "22.1 22.2",
+      "NIST RMF": "Respond 1.1 Respond 1.2",
+      SOC2: "CC7.3 CC7.4",
+      "Key control activities": "Development and maintenance of incident response plans - Regular incident response team training - Incident classification and prioritization - Communication protocol implementation - Documentation of response procedures - Regular testing of response capabilities - Updates based on lessons learned",
+      "Required Evidence": "Incident Response Plan (PDF) - Training Records (Excel) - Classification Guidelines (PDF) - Communication Protocols (PDF) - Test Exercise Reports (PDF) - Incident Response Team Roster (Excel) - Update Logs (Excel) - Test Scenario Documentation (PDF)",
+      "Control test plan and procedures": "1. Review incident response plan completeness 2. Verify team training completion 3. Test classification procedures 4. Check communication protocols 5. Review response capabilities 6. Assess documentation quality 7. Control passes if response planning is comprehensive; fails if significant gaps exist 8. For failures, Response Team must update within 15 days"
+    },
+    {
+      Domain: "Incident Management",
+      Master: "IM-2",
+      Topic: "Incident Detection and Response",
+      "Control Statement": "The organisation shall implement processes and tools to detect, report, and respond to AI system incidents in a timely manner. This includes establishing monitoring mechanisms, implementing incident reporting channels, maintaining incident logs, and ensuring appropriate escalation procedures. The organisation must ensure incidents are properly documented and tracked through resolution.",
+      ISO42001: "A.8.2",
+      ISO27001: "A.16.1",
+      ISO27701: "6.13.1",
+      "EU AI ACT": "22.1 22.2",
+      "NIST RMF": "Respond 2.1 Respond 2.2",
+      SOC2: "CC7.3 CC7.4",
+      "Key control activities": "Implementation of incident detection tools - Establishment of reporting channels - Maintenance of incident logs - Execution of response procedures - Documentation of incident handling - Regular review of detection capabilities - Testing of escalation procedures",
+      "Required Evidence": "Incident Detection Configurations (PDF) - Reporting Channel Documentation (PDF) - Incident Logs (Excel) - Response Procedure Records (PDF) - Handling Documentation (PDF) - Detection Review Reports (PDF) - Escalation Test Results (PDF) - Tool Configuration Records (Excel)",
+      "Control test plan and procedures": "1. Test incident detection tools 2. Verify reporting channels 3. Review incident log quality 4. Check response procedures 5. Assess documentation completeness 6. Test escalation process 7. Control passes if detection and response are effective; fails if incidents are missed or poorly handled 8. For failures, Security Team must correct within 24 hours"
+    },
+    {
+      Domain: "Incident Management",
+      Master: "IM-3",
+      Topic: "Incident Analysis and Improvement",
+      "Control Statement": "The organisation shall conduct thorough analysis of AI system incidents to identify root causes and implement improvements to prevent recurrence. This includes performing post-incident reviews, documenting lessons learned, updating relevant procedures and controls, and communicating findings to appropriate stakeholders. The organisation must maintain records of incident analysis and track the implementation of recommended improvements.",
+      ISO42001: "A.8.2",
+      ISO27001: "A.16.1",
+      ISO27701: "6.13.1",
+      "EU AI ACT": "22.1 22.2",
+      "NIST RMF": "Respond 3.1 Respond 3.2",
+      SOC2: "CC7.3 CC7.4",
+      "Key control activities": "Conducting post-incident reviews - Root cause analysis execution - Implementation of improvements - Documentation of lessons learned - Communication of findings - Tracking of improvement actions - Regular review of incident trends",
+      "Required Evidence": "Post-Incident Review Reports (PDF) - Root Cause Analysis Documents (PDF) - Improvement Implementation Records (Excel) - Lessons Learned Repository (PDF) - Communication Records (PDF) - Action Tracking Logs (Excel) - Trend Analysis Reports (PDF) - Stakeholder Briefings (PDF)",
+      "Control test plan and procedures": "1. Review post-incident analysis process 2. Verify root cause identification 3. Check improvement implementation 4. Review lessons learned documentation 5. Verify communication effectiveness 6. Assess trend analysis 7. Control passes if analysis leads to effective improvements; fails if root causes are not addressed 8. For failures, Incident Team must revise approach within 20 days"
     }
   ] as FrameworkControl[]
 }; 
