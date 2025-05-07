@@ -1,0 +1,41 @@
+[debug] [2025-05-07T09:49:49.311Z] ----------------------------------------------------------------------
+[debug] [2025-05-07T09:49:49.316Z] Command:       /usr/local/Cellar/node/22.9.0/bin/node /usr/local/bin/firebase init
+[debug] [2025-05-07T09:49:49.316Z] CLI Version:   14.2.2
+[debug] [2025-05-07T09:49:49.316Z] Platform:      darwin
+[debug] [2025-05-07T09:49:49.317Z] Node Version:  v22.9.0
+[debug] [2025-05-07T09:49:49.317Z] Time:          Wed May 07 2025 15:19:49 GMT+0530 (India Standard Time)
+[debug] [2025-05-07T09:49:49.317Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-07T09:49:49.327Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-07T09:49:49.327Z] > authorizing via signed-in user (shantanudesai1@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/shantanu/AIGovernanceFramework/aigovernanceframework
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2025-05-07T09:50:27.394Z] Checked if tokens are valid: true, expires at: 1746614210782
+[debug] [2025-05-07T09:50:27.394Z] Checked if tokens are valid: true, expires at: 1746614210782
+[debug] [2025-05-07T09:50:27.396Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2025-05-07T09:50:27.396Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"aigovernanceframework","name":"aigovernanceframework"}
+[debug] [2025-05-07T09:50:28.974Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 409
+[debug] [2025-05-07T09:50:28.974Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2025-05-07T09:50:29.198Z] FirebaseError: Request to https://cloudresourcemanager.googleapis.com/v1/projects had HTTP Error: 409, Requested entity already exists
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:52:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID aigovernanceframework. Please try again with a unique project ID.
