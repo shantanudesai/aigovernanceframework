@@ -1,6 +1,22 @@
 # AI Governance Framework
 
-A comprehensive framework for implementing and managing AI governance controls across twelve key domains. This web application provides an interactive interface to explore and understand various aspects of AI governance.
+A comprehensive framework for implementing and managing AI governance controls across twelve key domains. 
+This web application provides an interactive interface to explore and understand various aspects of AI governance.
+Huge shout out to James ( https://github.com/The-Company-Ethos/doing-ai-governance ) and his blog at https://www.ethos-ai.org/ for providing well researched and relevant literature and grouping of AI Governance domains + controls.
+
+These are the 12 doamins and there are 44 controls across all domains:
+Governance & Leadership (GL-1 to GL-3)
+Risk Management (RM-1 to RM-4)
+Regulatory Operations (RO-1 to RO-4)
+System, Data and Model Lifecycle (LC-1 to LC-5)
+Security & Engineering (SE-1 to SE-5)
+Safe Responsible AI (RS-1 to RS-5)
+Privacy (PR-1 to PR-4)
+Assurance and Audit (AA-1 to AA-3)
+Operational Monitoring (OM-1 to OM-3)
+Third Party & Supply Chain (TP-1 to TP-2)
+Compliance & Oversight (CO-1 to CO-2)
+Incident Management (IM-1 to IM-3)
 
 Made with :heart: in Pune, India
 
