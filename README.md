@@ -19,9 +19,9 @@ These are the 12 doamins and there are 44 controls across all domains:
 - Incident Management (IM-1 to IM-3)
 
 In addition to the providing the Control Statements and tagging them with specific requirements in ISO42001, ISO27001, ISO27701, the NIST Risk Management Framework, EU AI Act, and SOC2, this framework provide Implementation Guidance for each control in following three logical steps:
-- **Key control activities:** Specific activities and tasks that need to be performed
-- **Required Evidence:** Documentation and records that must be maintained
-- **Control test plan and procedures:** Step-by-step procedures for testing the control
+- **Key control activities:** Specific activities and tasks that need to be performed.
+- **Required Evidence:** Documentation and records that must be maintained.
+- **Control test plan and procedures:** Step-by-step procedures for testing the control.
 This additional guidance should help teams sitting in 1st and 2nd Line of Defense as well as provide some pointers for the 3rd LoD (Group Internal Audit) on what could be included in the audit scope.
 
 Made with :heart: in Pune, India
