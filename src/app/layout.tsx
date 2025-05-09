@@ -1,6 +1,7 @@
 import React from 'react';
 import './globals.css';
 import { Inter, Poppins } from 'next/font/google';
+import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const poppins = Poppins({
@@ -21,7 +22,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
-      <body className="min-h-screen bg-zinc-50">{children}</body>
+      <body className="min-h-screen bg-zinc-50 flex flex-col">
+        <main className="flex-grow">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 } 
