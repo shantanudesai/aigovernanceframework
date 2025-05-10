@@ -1,0 +1,660 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\froman\fcharset0 Times-Roman;\f2\fmodern\fcharset0 Courier;
+\f3\froman\fcharset0 TimesNewRomanPS-BoldMT;\f4\froman\fcharset0 TimesNewRomanPSMT;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue233;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c0\c0\c93333;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid1\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid101\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid102\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{square\}}{\leveltext\leveltemplateid103\'01\uc0\u9642 ;}{\levelnumbers;}\fi-360\li2160\lin2160 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{square\}}{\leveltext\leveltemplateid104\'01\uc0\u9642 ;}{\levelnumbers;}\fi-360\li2880\lin2880 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww35640\viewh22400\viewkind0
+\deftab720
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 EU AI Act Risk Categorization Tool Logic - Updated V1\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 This document outlines the enhanced decision tree logic, sample questions, and control mappings for an EU AI Act Risk Categorization Tool integrated into the Ultimate AI Governance Framework. The tool classifies AI systems into four risk levels\'97Unacceptable, High-Risk, Limited, and Minimal\'97based on the EU AI Act\'92s criteria, with improved branching clarity, concrete examples, and subdivided Annex III functions for high-risk systems. It maps risk levels to controls in 
+\f2\fs26 SourceAssurance.json
+\f1\fs24  to guide compliance.\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Decision Tree Logic\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 The decision tree collects comprehensive information about an AI system\'92s characteristics before determining the risk level, ensuring clarity in complex scenarios where systems may fit multiple categories. It prioritizes the highest risk level (Unacceptable > High-Risk > Limited > Minimal) and notes all relevant characteristics for tailored control recommendations.\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 Structure\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\fs24 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Collect Characteristics
+\f1\b0 : Ask sequential questions about prohibited uses, safety components, Annex III functions, human interaction, and content generation, using conditional logic to skip irrelevant questions.\
+\ls1\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Determine Risk Level
+\f1\b0 : Apply logic to classify the system based on the EU AI Act\'92s criteria, selecting the highest applicable risk level.\
+\ls1\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Map Controls
+\f1\b0 : Recommend mandatory and recommended controls from 
+\f2\fs26 SourceAssurance.json
+\f1\fs24 , with specific emphasis for High Risk subcategories.\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 Detailed Logic\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls2\ilvl0
+\fs24 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Step 1: Prohibited Uses (Unacceptable Risk)
+\f1\b0 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls2\ilvl1
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f3 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Criteria
+\f1\b0 : AI systems using subliminal manipulation, social scoring, or real-time biometric identification in public spaces for law enforcement (without exemptions) are banned ({\field{\*\fldinst{HYPERLINK "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 EU AI Act}}).\
+\ls2\ilvl1
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f3 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Question
+\f1\b0 : Does your AI system perform any prohibited functions? (Select all that apply)\
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\partightenfactor0
+\ls2\ilvl2\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9642 
+\f1 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Use subliminal techniques to materially distort behavior (e.g., manipulative voice-activated toys influencing children\'92s choices).\
+\ls2\ilvl2\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9642 
+\f1 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Exploit vulnerabilities of specific groups (e.g., deceptive financial ads targeting elderly users).\
+\ls2\ilvl2\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9642 
+\f1 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Conduct social scoring based on behavior or characteristics (e.g., scoring job applicants based on social media activity).\
+\ls2\ilvl2\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9642 
+\f1 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Use real-time remote biometric identification in public spaces for law enforcement without legal exemptions (e.g., facial recognition in public squares).\
+\ls2\ilvl2\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9642 
+\f1 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 None of the above.\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls2\ilvl1
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f3 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Logic
+\f1\b0 : If any option except \'93None\'94 is selected, classify as 
+\f0\b Unacceptable Risk
+\f1\b0  and stop. Otherwise, proceed to Step 2.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls2\ilvl0
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Step 2: Safety Component (High Risk)
+\f1\b0 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls2\ilvl1
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f3 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Criteria
+\f1\b0 : AI systems that are safety components of products under EU harmonization legislation (e.g., medical devices, machinery) are high-risk (Article 6, {\field{\*\fldinst{HYPERLINK "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 EU AI Act}}).\
+\ls2\ilvl1
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f3 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Question
+\f1\b0 : Is your AI system a safety component of a product regulated under EU harmonization legislation? (e.g., AI controlling diagnostic functions in medical devices like pacemakers, safety systems in autonomous vehicles, or quality control in toy manufacturing)\
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\partightenfactor0
+\ls2\ilvl2\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9642 
+\f1 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Yes\
+\ls2\ilvl2\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9642 
+\f1 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 No\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls2\ilvl1
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f3 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Logic
+\f1\b0 : If Yes, flag as potential 
+\f0\b High Risk
+\f1\b0  and proceed to Step 3 to check for additional high-risk functions. If No, proceed to Step 3.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls2\ilvl0
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Step 3: Annex III Functions (High Risk)
+\f1\b0 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls2\ilvl1
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f3 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Criteria
+\f1\b0 : AI systems listed in Annex III are high-risk if they pose significant risks to health, safety, or fundamental rights, covering domains like biometrics, employment, and justice ({\field{\*\fldinst{HYPERLINK "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 EU AI Act Annex III}}).\
+\ls2\ilvl1
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f3 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Question
+\f1\b0 : Does your AI system perform any of the following high-risk functions listed in Annex III of the EU AI Act? (Select all that apply, grouped by domain)\
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\partightenfactor0
+\ls2\ilvl2
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f3 \uc0\u9642 
+\f0 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Biometrics
+\f1\b0 :\
+\pard\tx2380\tx2880\pardeftab720\li2880\fi-2880\partightenfactor0
+\ls2\ilvl3\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9642 
+\f1 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Biometric identification or categorization of individuals (e.g., AI for facial recognition in access control systems).\
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\partightenfactor0
+\ls2\ilvl2
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f3 \uc0\u9642 
+\f0 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Critical Infrastructure
+\f1\b0 :\
+\pard\tx2380\tx2880\pardeftab720\li2880\fi-2880\partightenfactor0
+\ls2\ilvl3\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9642 
+\f1 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Management or operation of critical infrastructure (e.g., AI controlling traffic flow in smart cities or grid stability in energy systems).\
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\partightenfactor0
+\ls2\ilvl2
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f3 \uc0\u9642 
+\f0 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Education
+\f1\b0 :\
+\pard\tx2380\tx2880\pardeftab720\li2880\fi-2880\partightenfactor0
+\ls2\ilvl3\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9642 
+\f1 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Determining access or assigning persons to educational institutions (e.g., AI ranking university applicants).\
+\ls2\ilvl3\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9642 
+\f1 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Assessing students in educational institutions (e.g., AI grading exams or predicting academic performance).\
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\partightenfactor0
+\ls2\ilvl2
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f3 \uc0\u9642 
+\f0 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Employment
+\f1\b0 :\
+\pard\tx2380\tx2880\pardeftab720\li2880\fi-2880\partightenfactor0
+\ls2\ilvl3\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9642 
+\f1 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Recruitment or selection of natural persons (e.g., AI screening resumes or conducting automated interviews).\
+\ls2\ilvl3\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9642 
+\f1 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Decisions on promotion, termination, task allocation, or monitoring performance (e.g., AI evaluating employee productivity metrics).\
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\partightenfactor0
+\ls2\ilvl2
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f3 \uc0\u9642 
+\f0 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Essential Services
+\f1\b0 :\
+\pard\tx2380\tx2880\pardeftab720\li2880\fi-2880\partightenfactor0
+\ls2\ilvl3\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9642 
+\f1 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Evaluating creditworthiness or eligibility for public benefits (e.g., AI assessing loan applications or welfare eligibility).\
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\partightenfactor0
+\ls2\ilvl2
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f3 \uc0\u9642 
+\f0 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Law Enforcement
+\f1\b0 :\
+\pard\tx2380\tx2880\pardeftab720\li2880\fi-2880\partightenfactor0
+\ls2\ilvl3\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9642 
+\f1 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Risk assessments or evidence analysis in law enforcement (e.g., AI predicting crime hotspots or analyzing forensic data).\
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\partightenfactor0
+\ls2\ilvl2
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f3 \uc0\u9642 
+\f0 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Migration and Borders
+\f1\b0 :\
+\pard\tx2380\tx2880\pardeftab720\li2880\fi-2880\partightenfactor0
+\ls2\ilvl3\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9642 
+\f1 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Managing migration, asylum, or border control (e.g., AI processing visa applications or border surveillance).\
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\partightenfactor0
+\ls2\ilvl2
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f3 \uc0\u9642 
+\f0 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Justice
+\f1\b0 :\
+\pard\tx2380\tx2880\pardeftab720\li2880\fi-2880\partightenfactor0
+\ls2\ilvl3\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9642 
+\f1 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Administering justice or democratic processes (e.g., AI assisting in legal sentencing or voter eligibility checks).\
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\partightenfactor0
+\ls2\ilvl2\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9642 
+\f1 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 None of the above.\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls2\ilvl1
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f3 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Logic
+\f1\b0 : If any option except \'93None\'94 is selected, flag as 
+\f0\b High Risk
+\f1\b0 . If flagged as High Risk from either this or Step 2, classify as 
+\f0\b High Risk
+\f1\b0  and proceed to Step 4 to check for additional transparency obligations. If no High Risk flags, proceed to Step 4.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls2\ilvl0
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	4	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Step 4: Human Interaction (Limited Risk)
+\f1\b0 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls2\ilvl1
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f3 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Criteria
+\f1\b0 : AI systems interacting with humans (e.g., chatbots, emotion recognition) require transparency to inform users they are not interacting with a human (Article 50, {\field{\*\fldinst{HYPERLINK "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 EU AI Act}}).\
+\ls2\ilvl1
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f3 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Question
+\f1\b0 : Does your AI system interact directly with humans in a way that requires transparency? (e.g., chatbots providing customer service, virtual assistants like Siri, or emotion recognition systems)\
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\partightenfactor0
+\ls2\ilvl2\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9642 
+\f1 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Yes\
+\ls2\ilvl2\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9642 
+\f1 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 No\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls2\ilvl1
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f3 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Logic
+\f1\b0 : If Yes, flag as potential 
+\f0\b Limited Risk
+\f1\b0 . Proceed to Step 5.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls2\ilvl0
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	5	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Step 5: Content Generation (Limited Risk)
+\f1\b0 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls2\ilvl1
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f3 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Criteria
+\f1\b0 : AI systems generating or manipulating content (e.g., deep fakes, generated text) must disclose AI-generated content (Article 50, {\field{\*\fldinst{HYPERLINK "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 EU AI Act}}).\
+\ls2\ilvl1
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f3 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Question
+\f1\b0 : Does your AI system generate or manipulate content that could be mistaken for human-generated? (e.g., deep fakes creating realistic videos, AI-generated news articles, or text-to-image models like DALL-E)\
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\partightenfactor0
+\ls2\ilvl2\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9642 
+\f1 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Yes\
+\ls2\ilvl2\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9642 
+\f1 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 No\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls2\ilvl1
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f3 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Logic
+\f1\b0 :\
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\partightenfactor0
+\ls2\ilvl2\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9642 
+\f1 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 If flagged as High Risk in Steps 2 or 3, classify as 
+\f0\b High Risk
+\f1\b0  but note transparency obligations if Human Interaction or Content Generation is Yes.\
+\ls2\ilvl2\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9642 
+\f1 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 If no High Risk flags and either Human Interaction or Content Generation is Yes, classify as 
+\f0\b Limited Risk
+\f1\b0 .\
+\ls2\ilvl2\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9642 
+\f1 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 If no High Risk or Limited Risk flags, classify as 
+\f0\b Minimal Risk
+\f1\b0 .\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 Branching Clarity for Complex Scenarios\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 To handle cases where an AI system may fit multiple categories:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Multiple High-Risk Characteristics
+\f1\b0 : If a system is both a safety component and performs an Annex III function (e.g., AI in a medical device also used for biometric identification), it is classified as High Risk, but the tool notes both aspects to recommend controls like 
+\f2\fs26 LC-1
+\f1\fs24  (Data Governance) for safety components and 
+\f2\fs26 PR-1
+\f1\fs24  (Privacy by Design) for biometrics.\
+\ls3\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 High Risk with Transparency Needs
+\f1\b0 : If a High Risk system also interacts with humans (e.g., a hiring chatbot), it remains High Risk, but 
+\f2\fs26 CO-1
+\f1\fs24  (Transparency) is prioritized to meet Article 50 obligations.\
+\ls3\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Limited Risk Overlap
+\f1\b0 : If a system is Limited Risk due to both human interaction and content generation (e.g., a chatbot generating images), it is classified as Limited Risk, with 
+\f2\fs26 CO-1
+\f1\fs24  as the primary control, supplemented by 
+\f2\fs26 RS-4
+\f1\fs24  (Explainability) for clarity.\
+\ls3\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Edge Cases
+\f1\b0 : For systems performing narrow tasks in Annex III (Article 6), the tool defaults to High Risk unless users provide documentation proving low risk, ensuring conservative classification.\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 Mapping Risk Categories to SourceAssurance.json Controls\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 The EU AI Act\'92s obligations map to controls in 
+\f2\fs26 SourceAssurance.json
+\f1\fs24 , with tailored recommendations for High Risk subcategories to address specific Annex III functions. The table below summarizes the mappings.\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1386\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx1728
+\clvertalc \clshdrawnil \clwWidth1440\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx3456
+\clvertalc \clshdrawnil \clwWidth5399\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5184
+\clvertalc \clshdrawnil \clwWidth4213\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx6912
+\clvertalc \clshdrawnil \clwWidth2800\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
+
+\f0\b \cf0 Risk Category\cell 
+\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
+\cf0 Description\cell 
+\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
+\cf0 Mandatory Controls\cell 
+\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
+\cf0 Recommended Controls\cell 
+\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
+\cf0 Tailored Recommendations (High Risk)\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1386\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx1728
+\clvertalc \clshdrawnil \clwWidth1440\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx3456
+\clvertalc \clshdrawnil \clwWidth5399\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5184
+\clvertalc \clshdrawnil \clwWidth4213\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx6912
+\clvertalc \clshdrawnil \clwWidth2800\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Unacceptable Risk
+\f1\b0 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Prohibited systems (e.g., social scoring AI manipulating behavior).\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 None; systems are banned.\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 None\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 N/A\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1386\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx1728
+\clvertalc \clshdrawnil \clwWidth1440\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx3456
+\clvertalc \clshdrawnil \clwWidth5399\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5184
+\clvertalc \clshdrawnil \clwWidth4213\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx6912
+\clvertalc \clshdrawnil \clwWidth2800\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf0 High Risk
+\f1\b0 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Systems with significant impact (e.g., AI in medical devices, hiring decisions).\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 RM-1
+\f1\fs24  to 
+\f2\fs26 RM-4
+\f1\fs24  (Risk Management), 
+\f2\fs26 LC-1
+\f1\fs24  (Data Governance), 
+\f2\fs26 LC-4
+\f1\fs24  (Technical Documentation), 
+\f2\fs26 RO-3
+\f1\fs24  (Record-Keeping), 
+\f2\fs26 CO-1
+\f1\fs24  (Transparency), 
+\f2\fs26 RS-1
+\f1\fs24  (Human Oversight), 
+\f2\fs26 RS-3
+\f1\fs24  (Robustness), 
+\f2\fs26 RS-6
+\f1\fs24  (Accuracy Metrics), 
+\f2\fs26 SE-1
+\f1\fs24  to 
+\f2\fs26 SE-5
+\f1\fs24  (Security), 
+\f2\fs26 AA-1
+\f1\fs24  to 
+\f2\fs26 AA-3
+\f1\fs24  (Assurance and Audit), 
+\f2\fs26 IM-1
+\f1\fs24  to 
+\f2\fs26 IM-3
+\f1\fs24  (Incident Management).\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 GL-1
+\f1\fs24  to 
+\f2\fs26 GL-3
+\f1\fs24  (Governance), 
+\f2\fs26 LC-2
+\f1\fs24  to 
+\f2\fs26 LC-3
+\f1\fs24 , 
+\f2\fs26 LC-5
+\f1\fs24  (Lifecycle), 
+\f2\fs26 PR-1
+\f1\fs24  to 
+\f2\fs26 PR-4
+\f1\fs24  (Privacy), 
+\f2\fs26 OM-1
+\f1\fs24  to 
+\f2\fs26 OM-3
+\f1\fs24  (Monitoring), 
+\f2\fs26 TP-1
+\f1\fs24  to 
+\f2\fs26 TP-2
+\f1\fs24  (Third Party), 
+\f2\fs26 CO-2
+\f1\fs24  (Stakeholder Engagement), 
+\f2\fs26 RS-2
+\f1\fs24  (Harm Prevention), 
+\f2\fs26 RS-4
+\f1\fs24  (Explainability), 
+\f2\fs26 RS-5
+\f1\fs24  (Fairness).\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 - 
+\f0\b Biometrics
+\f1\b0 : Prioritize 
+\f2\fs26 PR-1
+\f1\fs24  to 
+\f2\fs26 PR-4
+\f1\fs24  (Privacy), 
+\f2\fs26 RS-6
+\f1\fs24  (Accuracy), 
+\f2\fs26 CO-1
+\f1\fs24  (Transparency), 
+\f2\fs26 RS-5
+\f1\fs24  (Fairness per IEEE P7003).\
+- 
+\f0\b Employment
+\f1\b0 : Emphasize 
+\f2\fs26 RS-5
+\f1\fs24  (Fairness), 
+\f2\fs26 RS-4
+\f1\fs24  (Explainability), 
+\f2\fs26 RS-1
+\f1\fs24  (Human Oversight).\
+- 
+\f0\b Critical Infrastructure
+\f1\b0 : Focus on 
+\f2\fs26 RS-3
+\f1\fs24  (Robustness), 
+\f2\fs26 SE-1
+\f1\fs24  to 
+\f2\fs26 SE-5
+\f1\fs24  (Security).\
+- 
+\f0\b Education/Services/Justice
+\f1\b0 : Highlight 
+\f2\fs26 RS-5
+\f1\fs24  (Fairness), 
+\f2\fs26 CO-1
+\f1\fs24  (Transparency), 
+\f2\fs26 RS-1
+\f1\fs24  (Human Oversight).\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1386\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx1728
+\clvertalc \clshdrawnil \clwWidth1440\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx3456
+\clvertalc \clshdrawnil \clwWidth5399\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5184
+\clvertalc \clshdrawnil \clwWidth4213\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx6912
+\clvertalc \clshdrawnil \clwWidth2800\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf0 Limited Risk
+\f1\b0 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Systems requiring transparency (e.g., customer service chatbots, deep fake generators).\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 CO-1
+\f1\fs24  (Transparency).\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 RS-4
+\f1\fs24  (Explainability), 
+\f2\fs26 RS-5
+\f1\fs24  (Fairness per IEEE P7003), 
+\f2\fs26 CO-2
+\f1\fs24  (Stakeholder Engagement).\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 N/A\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1386\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx1728
+\clvertalc \clshdrawnil \clwWidth1440\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx3456
+\clvertalc \clshdrawnil \clwWidth5399\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5184
+\clvertalc \clshdrawnil \clwWidth4213\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx6912
+\clvertalc \clshdrawnil \clwWidth2800\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf0 Minimal Risk
+\f1\b0 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Low-risk systems (e.g., spam filters, AI in video games).\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 None.\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 GL-1
+\f1\fs24  to 
+\f2\fs26 GL-3
+\f1\fs24  (Governance), 
+\f2\fs26 RM-1
+\f1\fs24  (Risk Framework), 
+\f2\fs26 LC-1
+\f1\fs24  (Data Governance), 
+\f2\fs26 CO-1
+\f1\fs24  (Transparency), 
+\f2\fs26 CO-2
+\f1\fs24  (Stakeholder Engagement).\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 N/A\cell \lastrow\row
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 Implementation Notes\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls4\ilvl0
+\fs24 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 User Interface
+\f1\b0 : Implement as a multi-step form using Next.js on Vercel, with conditional logic to display only relevant questions based on prior answers. Use tooltips to provide examples (e.g., \'93Facial recognition in access control\'94 for biometrics) and links to Annex III ({\field{\*\fldinst{HYPERLINK "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 EU AI Act Annexes}}).\
+\ls4\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Output
+\f1\b0 : Generate a PDF report using Vercel Edge Functions, detailing the risk category, mandatory/recommended controls, and links to 
+\f2\fs26 SourceAssurance.json
+\f1\fs24  templates (e.g., Transparency Disclosure Template for 
+\f2\fs26 CO-1
+\f1\fs24 ).\
+\ls4\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Accessibility
+\f1\b0 : Ensure the form meets WCAG 2.1 standards, aligning with 
+\f2\fs26 CO-1
+\f1\fs24 \'92s accessibility requirements.\
+\ls4\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Edge Cases
+\f1\b0 : For Annex III systems performing narrow tasks, include a note: \'93If your system performs only narrow procedural tasks, provide documentation to confirm low risk, but default classification is High Risk.\'94\
+\ls4\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 GPAI Models
+\f1\b0 : For general-purpose AI, add a follow-up question: \'93Is your system a general-purpose AI model?\'94 If Yes, recommend 
+\f2\fs26 OM-2
+\f1\fs24  (Event Logging) for systemic risk monitoring, but classify based on use case.\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 Key Citations\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls5\ilvl0
+\f1\b0\fs24 \cf3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}{\field{\*\fldinst{HYPERLINK "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec3 EU AI Act Regulatory Framework}}\cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls5\ilvl0\cf3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}{\field{\*\fldinst{HYPERLINK "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec3 Article 6: Classification Rules for High-Risk AI Systems}}\cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls5\ilvl0\cf3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}{\field{\*\fldinst{HYPERLINK "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec3 EU AI Act Annexes}}\cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+}

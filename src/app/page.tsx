@@ -2,6 +2,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Pillar from '../components/Pillar';
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 const domains = [
   { code: 'GL', title: 'Governance & Leadership', description: 'Executive commitment, roles, and strategic alignment for AI governance.' },
@@ -51,6 +53,24 @@ export default function Home() {
           </div>
           <p className="text-lg text-zinc-600 max-w-2xl mx-auto">
             A comprehensive framework for implementing and managing AI governance controls across twelve key domains.
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="max-w-2xl mx-auto mb-16 text-center"
+        >
+          <Link
+            href="/risk-assessment"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-lg font-medium rounded-lg shadow-sm text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 transition-all duration-300 hover:scale-105"
+          >
+            EU AI Act Risk Assessment
+            <ArrowRightIcon className="ml-2 -mr-1 h-5 w-5" aria-hidden="true" />
+          </Link>
+          <p className="mt-3 text-sm text-zinc-500">
+            Determine your AI system's risk level and applicable requirements under the EU AI Act
           </p>
         </motion.div>
 
