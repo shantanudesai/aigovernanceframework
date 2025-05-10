@@ -1,6 +1,6 @@
 import React from 'react';
 import './globals.css';
-import { Inter, Poppins } from 'next/font/google';
+import { Inter, Poppins, Permanent_Marker } from 'next/font/google';
 import Footer from '@/components/Footer';
 import { Analytics } from '@vercel/analytics/react';
 
@@ -9,6 +9,11 @@ const poppins = Poppins({
   weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
   variable: '--font-poppins',
+});
+const permanentMarker = Permanent_Marker({
+  weight: ['400'],
+  subsets: ['latin'],
+  variable: '--font-permanent-marker',
 });
 
 export const metadata = {
@@ -22,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
+    <html lang="en" className={`${inter.variable} ${poppins.variable} ${permanentMarker.variable}`}>
       <body className="min-h-screen bg-zinc-50 flex flex-col">
         <main className="flex-grow">{children}</main>
         <Footer />

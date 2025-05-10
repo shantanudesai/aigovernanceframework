@@ -26,11 +26,29 @@ export default function Home() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          className="text-center mb-12 relative"
         >
-          <h1 className="font-heading text-4xl font-bold text-zinc-900 sm:text-5xl mb-4">
-            AI Governance Framework
-          </h1>
+          <div className="relative inline-block">
+            <h1 className="font-heading text-4xl font-bold text-zinc-900 sm:text-5xl mb-4 relative">
+              <span className="relative">
+                <motion.span
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.7, delay: 0.2 }}
+                  className="absolute -top-4 -left-1 transform -rotate-12 text-red-500 font-bold text-3xl sm:text-4xl font-handwriting z-10 whitespace-nowrap"
+                  style={{ 
+                    textShadow: '1px 1px 2px rgba(255,100,100,0.3)',
+                    filter: 'drop-shadow(0 2px 2px rgba(0,0,0,0.1))',
+                    letterSpacing: '1px',
+                    transformOrigin: 'bottom left'
+                  }}
+                >
+                  Ultimate
+                </motion.span>
+                AI
+              </span> Governance Framework
+            </h1>
+          </div>
           <p className="text-lg text-zinc-600 max-w-2xl mx-auto">
             A comprehensive framework for implementing and managing AI governance controls across twelve key domains.
           </p>
