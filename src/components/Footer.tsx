@@ -2,12 +2,12 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="w-full border-t border-gray-200 py-4 px-6">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="text-sm text-gray-600">
+    <footer className="w-full border-t border-gray-200 py-6 px-4 sm:px-6">
+      <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
+        <div className="text-sm text-gray-600 text-center sm:text-left">
           Made with <span className="text-red-500">❤️</span> in Pune, India
         </div>
-        <div className="text-sm text-gray-600">
+        <div className="text-sm text-gray-600 text-center order-last sm:order-none max-w-[300px] sm:max-w-none">
           Built with inspiration from{' '}
           <Link 
             href="https://www.ethos-ai.org/" 
@@ -27,12 +27,13 @@ const Footer = () => {
             James Kavanagh
           </Link>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-6 sm:gap-4">
           <Link
             href="https://github.com/shantanudesai/aigovernanceframework"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 hover:text-gray-900"
+            aria-label="GitHub"
           >
             <svg
               className="w-6 h-6"
@@ -52,6 +53,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 hover:text-gray-900"
+            aria-label="LinkedIn"
           >
             <svg
               className="w-6 h-6"
@@ -71,6 +73,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 hover:text-gray-900"
+            aria-label="Email"
           >
             <svg
               className="w-6 h-6"
