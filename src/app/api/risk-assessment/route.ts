@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { determineRiskLevel } from '@/lib/risk-assessment';
-import { QuestionnaireState } from '@/lib/risk-assessment';
+import { QuestionnaireState } from '@/components/RiskAssessment/types';
 
 export async function POST(request: Request) {
   try {
