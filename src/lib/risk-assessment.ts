@@ -1,5 +1,6 @@
 import { RiskAssessmentResult, Control } from '@/components/RiskAssessment/types';
 import sourceAssurance from '@/data/SourceAssurance.json';
+import { QuestionnaireState } from '@/components/RiskAssessment/types';
 
 interface SourceAssuranceControl {
   Domain: string;
@@ -18,13 +19,6 @@ interface SourceAssuranceControl {
 
 interface SourceAssuranceData {
   data: SourceAssuranceControl[];
-}
-
-export interface QuestionnaireState {
-  prohibited: boolean[];
-  highRisk: boolean[];
-  limitedRisk: boolean[];
-  details: boolean[];
 }
 
 export const prohibitedQuestions = [
@@ -219,97 +213,88 @@ function getControlsForRiskLevel(riskLevel: string, answers: QuestionnaireState)
   return controls;
 }
 
-export function determineRiskLevel(answers: QuestionnaireState): RiskAssessmentResult {
-  // Check for prohibited practices
-  if (answers.prohibited.some((answer: boolean) => answer)) {
+export function determineRiskLevel(answers: QuestionnaireState) {
+  // Check for prohibited uses
+  if (answers.prohibited.some(answer => answer)) {
     return {
       level: 'unacceptable',
-      description: 'Your AI system includes prohibited practices under the EU AI Act',
+      description: 'Your AI system falls under prohibited uses according to the EU AI Act.',
       requirements: [
-        'Immediate cessation of development/deployment',
-        'Legal consultation required',
-        'System redesign needed to remove prohibited elements'
+        'Immediate cessation of system development/deployment',
+        'Review and redesign to remove prohibited functionalities',
+        'Consult legal experts for compliance guidance'
       ],
       nextSteps: [
         'Document all current system capabilities and uses',
-        'Identify and remove prohibited functionalities',
-        'Develop compliance plan with legal counsel'
+        'Identify specific aspects that trigger prohibited status',
+        'Develop remediation plan with clear timelines'
       ],
       mandatoryControls: [],
-      recommendedControls: [],
-    };
+      recommendedControls: []
+    } as const;
   }
 
-  // Check for high-risk applications
-  if (answers.highRisk.some((answer: boolean) => answer)) {
-    const controls = getControlsForRiskLevel('high', answers);
+  // Check for high-risk systems
+  if (answers.highRisk.some(answer => answer)) {
     return {
       level: 'high',
-      description: 'Your AI system is classified as high-risk under the EU AI Act',
+      description: 'Your AI system is classified as high-risk under the EU AI Act.',
       requirements: [
-        'Mandatory conformity assessment',
-        'Risk management system',
-        'Data governance practices',
-        'Technical documentation',
-        'Record keeping and logging',
-        'Human oversight measures',
-        'Accuracy and robustness',
-        'Registration in EU database'
+        'Implement comprehensive risk management system',
+        'Ensure data governance and quality controls',
+        'Maintain technical documentation and logs',
+        'Enable human oversight mechanisms',
+        'Ensure accuracy, robustness, and cybersecurity',
+        'Register in EU database before deployment'
       ],
       nextSteps: [
-        'Establish risk management system',
-        'Prepare technical documentation',
-        'Implement monitoring system',
-        'Set up human oversight mechanisms',
-        'Plan for conformity assessment'
+        'Conduct detailed risk assessment',
+        'Review and enhance data governance',
+        'Implement monitoring systems',
+        'Prepare compliance documentation'
       ],
-      mandatoryControls: controls.mandatory,
-      recommendedControls: controls.recommended,
-      tailoredRecommendations: controls.tailored
-    };
+      mandatoryControls: [],
+      recommendedControls: []
+    } as const;
   }
 
-  // Check for limited-risk applications
-  if (answers.limitedRisk.some((answer: boolean) => answer)) {
-    const controls = getControlsForRiskLevel('limited', answers);
+  // Check for limited risk systems
+  if (answers.limitedRisk.some(answer => answer)) {
     return {
       level: 'limited',
-      description: 'Your AI system has specific transparency obligations under the EU AI Act',
+      description: 'Your AI system has specific transparency obligations under the EU AI Act.',
       requirements: [
-        'Disclosure of AI system nature',
-        'Notification of emotion recognition',
-        'Disclosure of deep fake content',
-        'Transparency about biometric categorization'
+        'Notify users they are interacting with AI',
+        'Label AI-generated content appropriately',
+        'Design system to prevent emotional manipulation',
+        'Implement opt-out mechanisms where applicable'
       ],
       nextSteps: [
-        'Implement transparency measures',
-        'Update user interfaces and documentation',
-        'Review and update privacy notices',
+        'Review user interface for transparency',
+        'Update documentation and disclosures',
+        'Implement content labeling system',
         'Train staff on transparency requirements'
       ],
-      mandatoryControls: controls.mandatory,
-      recommendedControls: controls.recommended,
-      tailoredRecommendations: controls.tailored
-    };
+      mandatoryControls: [],
+      recommendedControls: []
+    } as const;
   }
 
-  // Minimal risk
-  const controls = getControlsForRiskLevel('minimal', answers);
+  // Minimal risk systems
   return {
     level: 'minimal',
-    description: 'Your AI system falls under minimal risk category',
+    description: 'Your AI system falls under minimal risk category.',
     requirements: [
-      'Voluntary codes of conduct',
-      'Basic documentation practices',
-      'Regular risk monitoring'
+      'Follow AI best practices and standards',
+      'Consider voluntary codes of conduct',
+      'Monitor regulatory developments'
     ],
     nextSteps: [
-      'Consider voluntary compliance measures',
-      'Document system capabilities',
-      'Monitor for regulatory changes'
+      'Document system capabilities and limitations',
+      'Implement basic monitoring controls',
+      'Stay informed about industry standards'
     ],
-    mandatoryControls: controls.mandatory,
-    recommendedControls: controls.recommended,
-    tailoredRecommendations: controls.tailored
-  };
+    mandatoryControls: [],
+    recommendedControls: []
+  } as const;
 } 
