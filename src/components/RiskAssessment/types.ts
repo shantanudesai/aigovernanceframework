@@ -1,44 +1,56 @@
-export interface Step {
+export type RiskLevel = 'unacceptable' | 'high' | 'limited' | 'minimal';
+
+export interface Control {
   id: string;
+  domain: string;
+  description: string;
+  keyControlActivities?: string;
+  requiredEvidence?: string;
+  controlTestPlan?: string;
+}
+
+export interface RiskAssessmentResult {
+  level: RiskLevel;
+  description: string;
+  requirements: string[];
+  nextSteps: string[];
+  mandatoryControls: Control[];
+  recommendedControls: Control[];
+  tailoredRecommendations?: Control[];
+}
+
+export interface QuestionnaireState {
+  prohibited: boolean[];
+  highRisk: boolean[];
+  limitedRisk: boolean[];
+  details: boolean[];
+}
+
+export interface Step {
+  id: keyof QuestionnaireState;
   title: string;
   description: string;
 }
 
-export interface QuestionnaireState {
-  prohibited: string[];
-  safety: boolean | null;
-  annexIII: string[];
-  humanInteraction: boolean | null;
-  contentGeneration: boolean | null;
-}
-
-export interface StepIndicatorProps {
-  steps: Step[];
-  currentStepIndex: number;
+export interface Question {
+  id: string;
+  label: string;
+  tooltip?: string;
 }
 
 export interface QuestionStepProps {
   step: Step;
-  onAnswer: (answer: any) => void;
-  value: any;
-}
-
-export interface RiskAssessmentResult {
-  id: string;
-  timestamp: number;
-  riskLevel: 'unacceptable' | 'high' | 'limited' | 'minimal';
-  answers: QuestionnaireState;
-  applicableControls: string[];
-  recommendations: {
-    immediate: string[];
-    governance: string[];
-    technical: string[];
-    documentation: string[];
-  };
+  value: boolean[];
+  onAnswer: (answer: boolean[]) => void;
 }
 
 export interface SummaryProps {
   answers: QuestionnaireState;
   result?: RiskAssessmentResult;
-  isLoading?: boolean;
+  isLoading: boolean;
+}
+
+export interface StepIndicatorProps {
+  steps: Step[];
+  currentStepIndex: number;
 } 

@@ -13,12 +13,10 @@ export interface RiskAssessmentResponse {
 }
 
 export interface RiskAssessmentResult {
-  id: string;
-  timestamp: string;
-  riskLevel: RiskLevel;
-  responses: RiskAssessmentResponse[];
-  recommendedControls: string[];
-  summary: string;
+  level: RiskLevel;
+  description: string;
+  requirements: string[];
+  nextSteps: string[];
 }
 
 export interface Control {

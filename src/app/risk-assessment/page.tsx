@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 
 const RiskAssessmentQuestionnaire = dynamic(
-  () => import('@/components/RiskAssessment/Questionnaire'),
+  () => import('@/components/RiskAssessment/QuestionnaireForm'),
   { ssr: false }
 );
 

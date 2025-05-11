@@ -1,203 +1,245 @@
-import React from 'react';
-import { SummaryProps } from './types';
-import { CheckCircleIcon, ExclamationTriangleIcon, XCircleIcon } from '@heroicons/react/24/solid';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
+'use client';
+
+import React, { useState } from 'react';
+import { SummaryProps, Control } from './types';
+import { CheckCircleIcon, ExclamationTriangleIcon, XCircleIcon, ChevronDownIcon, ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 
-type RiskColor = 'red' | 'yellow' | 'blue' | 'green';
-
-interface RiskAssessment {
-  level: string;
-  icon: typeof CheckCircleIcon;
-  color: RiskColor;
-  description: string;
+interface ControlDetailsProps {
+  control: Control;
+  isOpen: boolean;
+  onToggle: () => void;
 }
 
-const getRiskLevel = (riskLevel: string): RiskAssessment => {
-  switch (riskLevel) {
-    case 'unacceptable':
-      return {
-        level: 'Unacceptable Risk',
-        icon: XCircleIcon,
-        color: 'red',
-        description: 'Your AI system includes prohibited functions under the EU AI Act.',
-      };
-    case 'high':
-      return {
-        level: 'High Risk',
-        icon: ExclamationTriangleIcon,
-        color: 'yellow',
-        description: 'Your AI system is classified as high-risk under the EU AI Act.',
-      };
-    case 'limited':
-      return {
-        level: 'Limited Risk',
-        icon: ExclamationTriangleIcon,
-        color: 'blue',
-        description: 'Your AI system has transparency obligations under the EU AI Act.',
-      };
-    default:
-      return {
-        level: 'Minimal Risk',
-        icon: CheckCircleIcon,
-        color: 'green',
-        description: 'Your AI system is classified as minimal risk under the EU AI Act.',
-      };
+const getDomainCode = (domain: string): string => {
+  const domainMap: { [key: string]: string } = {
+    'Risk Management': 'rm',
+    'Governance & Leadership': 'gl',
+    'System, Data and Model Lifecycle': 'lc',
+    'Security': 'se',
+    'Safe Responsible AI': 'rs',
+    'Privacy': 'pr',
+    'Assurance and Audit': 'aa',
+    'Third Party & Supply Chain': 'tp',
+    'Transparency & Communication': 'co',
+    'Incident Management': 'im',
+    'Operational Monitoring': 'om',
+    'Regulatory Operations': 'ro'
+  };
+  return domainMap[domain] || '';
+};
+
+const ControlDetails = ({ control, isOpen, onToggle }: ControlDetailsProps) => {
+  return (
+    <div className="border rounded-lg mb-4">
+      <button
+        onClick={onToggle}
+        className="w-full flex justify-between items-center p-4 hover:bg-gray-50"
+      >
+        <div className="flex items-center space-x-4">
+          <span className="font-medium text-gray-900">{control.id}</span>
+          <span className="text-gray-400">|</span>
+          <span className="text-gray-600">{control.domain}</span>
+        </div>
+        <ChevronDownIcon
+          className={`h-5 w-5 text-gray-400 transform transition-transform ${
+            isOpen ? 'rotate-180' : ''
+          }`}
+        />
+      </button>
+      
+      {isOpen && (
+        <div className="px-4 pb-4 border-t">
+          <div className="mt-4 space-y-4">
+            <div>
+              <h4 className="text-sm font-medium text-gray-900 mb-2">Description</h4>
+              <p className="text-sm text-gray-600">{control.description}</p>
+            </div>
+            
+            <div className="flex justify-end">
+              <Link 
+                href={`/domain/${getDomainCode(control.domain)}`}
+                className="inline-flex items-center text-sm text-sky-600 hover:text-sky-700"
+              >
+                <span>View in Framework</span>
+                <ArrowTopRightOnSquareIcon className="ml-1 h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+const ControlSection = ({ 
+  title, 
+  subtitle,
+  controls 
+}: { 
+  title: string; 
+  subtitle: string;
+  controls: Control[] 
+}) => {
+  const [openControlId, setOpenControlId] = useState<string | null>(null);
+
+  return (
+    <div className="mb-8">
+      <h3 className="text-lg font-medium text-gray-900 mb-2">{title}</h3>
+      {subtitle && (
+        <p className="text-sm text-gray-600 mb-4">{subtitle}</p>
+      )}
+      <div className="space-y-2">
+        {controls.map((control) => (
+          <ControlDetails
+            key={control.id}
+            control={control}
+            isOpen={openControlId === control.id}
+            onToggle={() => setOpenControlId(openControlId === control.id ? null : control.id)}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const riskLevelConfig = {
+  unacceptable: {
+    icon: XCircleIcon,
+    color: 'red',
+    bgColor: 'bg-red-50',
+    textColor: 'text-red-700',
+    borderColor: 'border-red-200'
+  },
+  high: {
+    icon: ExclamationTriangleIcon,
+    color: 'orange',
+    bgColor: 'bg-orange-50',
+    textColor: 'text-orange-700',
+    borderColor: 'border-orange-200'
+  },
+  limited: {
+    icon: ExclamationTriangleIcon,
+    color: 'yellow',
+    bgColor: 'bg-yellow-50',
+    textColor: 'text-yellow-700',
+    borderColor: 'border-yellow-200'
+  },
+  minimal: {
+    icon: CheckCircleIcon,
+    color: 'green',
+    bgColor: 'bg-green-50',
+    textColor: 'text-green-700',
+    borderColor: 'border-green-200'
   }
 };
 
-export default function Summary({ answers, result, isLoading }: SummaryProps) {
-  const colorClasses: Record<RiskColor, string> = {
-    red: 'bg-red-50 text-red-700 ring-red-600/20',
-    yellow: 'bg-yellow-50 text-yellow-700 ring-yellow-600/20',
-    blue: 'bg-sky-50 text-sky-700 ring-sky-600/20',
-    green: 'bg-green-50 text-green-700 ring-green-600/20',
-  };
-
+export default function Summary({ result, isLoading }: SummaryProps) {
   if (isLoading) {
     return (
       <div className="flex items-center justify-center py-12">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-sky-600" />
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+        <span className="ml-3">Analyzing your responses...</span>
       </div>
     );
   }
 
-  if (!result) {
-    return null;
-  }
+  if (!result) return null;
 
-  const assessment = getRiskLevel(result.riskLevel);
+  const config = riskLevelConfig[result.level];
+  const Icon = config.icon;
 
   return (
     <div className="space-y-8">
-      {/* Risk Level Indicator */}
-      <div className={`rounded-md p-4 ring-1 ring-inset ${colorClasses[assessment.color]}`}>
-        <div className="flex">
+      <div className={`p-6 rounded-lg ${config.bgColor} ${config.borderColor} border`}>
+        <div className="flex items-start">
           <div className="flex-shrink-0">
-            <assessment.icon className="h-5 w-5" aria-hidden="true" />
+            <Icon className={`h-6 w-6 text-${config.color}-600`} />
           </div>
           <div className="ml-3">
-            <h3 className="text-sm font-medium">{assessment.level}</h3>
-            <div className="mt-2 text-sm">
-              <p>{assessment.description}</p>
-            </div>
+            <h3 className={`text-lg font-medium text-${config.color}-800`}>
+              {result.level === 'unacceptable' ? 'Unacceptable Risk' :
+               result.level === 'high' ? 'High Risk' :
+               result.level === 'limited' ? 'Limited Risk' :
+               'Minimal Risk'}
+            </h3>
+            <p className={`mt-2 text-${config.color}-700`}>
+              {result.description}
+            </p>
           </div>
         </div>
       </div>
 
-      {/* Immediate Actions (if any) */}
-      {result.recommendations.immediate.length > 0 && (
+      <div className="space-y-6">
         <div>
-          <h3 className="text-lg font-medium leading-6 text-red-700 mb-4">
-            Immediate Actions Required
-          </h3>
-          <div className="bg-red-50 shadow overflow-hidden sm:rounded-md">
-            <ul role="list" className="divide-y divide-red-200">
-              {result.recommendations.immediate.map((action, index) => (
-                <li key={index} className="px-4 py-4">
-                  <p className="text-sm font-medium text-red-900">{action}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <h4 className="text-lg font-medium text-gray-900 mb-4">Requirements</h4>
+          <ul className="space-y-3">
+            {result.requirements.map((requirement, index) => (
+              <li key={index} className="flex items-start">
+                <span className="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-blue-100 text-blue-800">
+                  {index + 1}
+                </span>
+                <span className="ml-3 text-gray-700">{requirement}</span>
+              </li>
+            ))}
+          </ul>
         </div>
-      )}
 
-      {/* Recommendations by Category */}
-      {(result.recommendations.governance.length > 0 ||
-        result.recommendations.technical.length > 0 ||
-        result.recommendations.documentation.length > 0) && (
         <div>
-          <h3 className="text-lg font-medium leading-6 text-gray-900 mb-4">
-            Recommended Actions
-          </h3>
-          <div className="space-y-6">
-            {/* Governance */}
-            {result.recommendations.governance.length > 0 && (
-              <div>
-                <h4 className="text-sm font-medium text-gray-900 mb-2">Governance & Policy</h4>
-                <div className="bg-white shadow overflow-hidden sm:rounded-md">
-                  <ul role="list" className="divide-y divide-gray-200">
-                    {result.recommendations.governance.map((rec, index) => (
-                      <li key={index} className="px-4 py-4">
-                        <p className="text-sm text-gray-900">{rec}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            )}
-
-            {/* Technical */}
-            {result.recommendations.technical.length > 0 && (
-              <div>
-                <h4 className="text-sm font-medium text-gray-900 mb-2">Technical Implementation</h4>
-                <div className="bg-white shadow overflow-hidden sm:rounded-md">
-                  <ul role="list" className="divide-y divide-gray-200">
-                    {result.recommendations.technical.map((rec, index) => (
-                      <li key={index} className="px-4 py-4">
-                        <p className="text-sm text-gray-900">{rec}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            )}
-
-            {/* Documentation */}
-            {result.recommendations.documentation.length > 0 && (
-              <div>
-                <h4 className="text-sm font-medium text-gray-900 mb-2">Documentation & Evidence</h4>
-                <div className="bg-white shadow overflow-hidden sm:rounded-md">
-                  <ul role="list" className="divide-y divide-gray-200">
-                    {result.recommendations.documentation.map((rec, index) => (
-                      <li key={index} className="px-4 py-4">
-                        <p className="text-sm text-gray-900">{rec}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            )}
-          </div>
+          <h4 className="text-lg font-medium text-gray-900 mb-4">Next Steps</h4>
+          <ul className="space-y-3">
+            {result.nextSteps.map((step, index) => (
+              <li key={index} className="flex items-start">
+                <span className="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-green-100 text-green-800">
+                  {index + 1}
+                </span>
+                <span className="ml-3 text-gray-700">{step}</span>
+              </li>
+            ))}
+          </ul>
         </div>
-      )}
 
-      {/* Applicable Controls */}
-      {result.applicableControls.length > 0 && (
-        <div>
-          <h3 className="text-lg font-medium leading-6 text-gray-900 mb-4">
-            Framework Controls to Implement
-          </h3>
-          <div className="bg-white shadow overflow-hidden sm:rounded-md">
-            <ul role="list" className="divide-y divide-gray-200">
-              {result.applicableControls.map((controlCode) => (
-                <li key={controlCode}>
-                  <Link
-                    href={`/domain/${controlCode.split('-')[0].toLowerCase()}`}
-                    className="block hover:bg-gray-50"
-                  >
-                    <div className="px-4 py-4 flex items-center justify-between">
-                      <span className="text-sm font-medium text-sky-600">{controlCode}</span>
-                      <ArrowRightIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
-                    </div>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+        {(result.mandatoryControls.length > 0 || 
+          result.recommendedControls.length > 0 || 
+          (result.tailoredRecommendations && result.tailoredRecommendations.length > 0)) && (
+          <div className="mt-8">
+            <h4 className="text-lg font-medium text-gray-900 mb-6">Controls Mapping</h4>
+            <div className="bg-white rounded-lg border border-gray-200 p-6 space-y-8">
+              {result.mandatoryControls.length > 0 && (
+                <ControlSection 
+                  title="Mandatory Controls" 
+                  subtitle="Controls required by the EU AI Act based on your system's risk level"
+                  controls={result.mandatoryControls} 
+                />
+              )}
+              
+              {result.recommendedControls.length > 0 && (
+                <ControlSection 
+                  title="Recommended Controls" 
+                  subtitle="Additional controls recommended for your type of AI system"
+                  controls={result.recommendedControls} 
+                />
+              )}
+              
+              {result.tailoredRecommendations && result.tailoredRecommendations.length > 0 && (
+                <ControlSection 
+                  title="Tailored Recommendations" 
+                  subtitle="Specific controls based on your system's characteristics"
+                  controls={result.tailoredRecommendations} 
+                />
+              )}
+            </div>
           </div>
-        </div>
-      )}
+        )}
 
-      <div className="mt-8">
-        <a
-          href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-sky-600 hover:text-sky-500"
-        >
-          Learn more about the EU AI Act →
-        </a>
+        <div className="mt-8 p-4 bg-gray-50 rounded-lg">
+          <h4 className="text-sm font-medium text-gray-900 mb-2">Important Note</h4>
+          <p className="text-sm text-gray-600">
+            This assessment is a preliminary evaluation based on the EU AI Act. For a complete compliance assessment, 
+            please consult with legal experts and maintain detailed documentation of your AI system's development, 
+            deployment, and monitoring processes.
+          </p>
+        </div>
       </div>
     </div>
   );
