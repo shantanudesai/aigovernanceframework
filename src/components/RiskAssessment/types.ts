@@ -33,8 +33,7 @@ export interface Step {
 }
 
 export interface Question {
-  id: string;
-  label: string;
+  text: string;
   tooltip?: string;
 }
 
@@ -45,9 +44,16 @@ export interface QuestionStepProps {
 }
 
 export interface SummaryProps {
-  answers: QuestionnaireState;
-  result?: RiskAssessmentResult;
-  isLoading: boolean;
+  result?: {
+    level: 'unacceptable' | 'high' | 'limited' | 'minimal';
+    description: string;
+    requirements: string[];
+    nextSteps: string[];
+    mandatoryControls: Control[];
+    recommendedControls: Control[];
+    tailoredRecommendations?: Control[];
+  };
+  isLoading?: boolean;
 }
 
 export interface StepIndicatorProps {
