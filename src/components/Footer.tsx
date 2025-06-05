@@ -7,26 +7,6 @@ const Footer = () => {
         <div className="text-sm text-gray-600 text-center sm:text-left">
           Made with <span className="text-red-500">❤️</span> in Pune, India
         </div>
-        <div className="text-sm text-gray-600 text-center order-last sm:order-none max-w-[300px] sm:max-w-none">
-          Built with inspiration from{' '}
-          <Link 
-            href="https://www.ethos-ai.org/" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-800"
-          >
-            Ethos AI
-          </Link>{' '}
-          by{' '}
-          <Link 
-            href="https://substack.com/@jameskavanagh"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-800"
-          >
-            James Kavanagh
-          </Link>
-        </div>
         <div className="flex gap-6 sm:gap-4">
           <Link
             href="https://github.com/shantanudesai/aigovernanceframework"

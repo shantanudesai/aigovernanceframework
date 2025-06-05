@@ -72,6 +72,26 @@ export default function Home() {
           <p className="text-lg text-zinc-600 max-w-2xl mx-auto">
             A comprehensive framework for implementing and managing AI governance controls across twelve key domains.
           </p>
+          <div className="mt-4 text-sm text-gray-500">
+            Built with inspiration from{' '}
+            <Link 
+              href="https://www.ethos-ai.org/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-800"
+            >
+              Ethos AI
+            </Link>{' '}
+            by{' '}
+            <Link 
+              href="https://substack.com/@jameskavanagh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-800"
+            >
+              James Kavanagh
+            </Link>
+          </div>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
